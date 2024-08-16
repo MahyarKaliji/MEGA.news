@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#weather {
+  background-size: 170vw;
+  background-position-x: 135vw;
+  background-position-y: 102vw;
+  position: relative;
+}
+
+.weather-gradient {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.widget-container {
+  position: relative;
+}
+
+.widget-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 410vw;
+  background-position-x: -153vw;
+  background-position-y: -115vw;
+  filter: blur(10px);
+  z-index: 5;
+  top: 0;
+  left: 0;
+}
+
+.widget-frame {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 6;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.widget-contant {
+  display: flex;
+  flex-direction: column;
+  gap: 3.826vw;
+  align-items: center;
+}
+
+.widget-contant > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swiper.popular-posts {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper img.main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper.new-posts {
+  width: 100%;
+  height: 360px;
+}
+
+.swiper-slide-active {
+  /* scale: 1.1; */
+  transition: all 0.4s ease;
+}
+
+.swiper.new-posts .swiper-slide {
+  height: 210px;
+}
+
+.swiper.trendy-posts {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .widget-bg {
+    background-size: 245vw;
+    background-position-x: -72vw;
+    background-position-y: -56vw;
+  }
+
+  .swiper.new-posts {
+    height: 1008px;
+  }
+}
