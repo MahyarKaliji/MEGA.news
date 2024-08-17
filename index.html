@@ -13,16 +13,16 @@
   </head>
   <body class="font-main">
     <header
-      class="mx-[4.103vw] mt-[11.538vw] mb-[7.692vw] sm:mx-[9.409vw] sm:mt-[2vw] sm:mb-[8.065vw] lg:mx-[10.625vw] lg:my-[2.344vw]"
+      class="mt-[11.538vw] mb-[7.692vw] sm:mt-[2vw] sm:mb-[8.065vw] lg:my-[2.344vw] mx-[1rem] sm:mx-[9.409vw] lg:mx-[7.812vw] xl:mx-[10.625vw]"
     >
-      <section class="flex items-center justify-between gap-[2.564vw]">
+      <section class="flex items-center justify-between">
         <!-- logo and menu - left header -->
         <div
-          class="flex items-center justify-between gap-[2.564vw] w-full lg:w-[34.583vw] lg:gap-[3.542vw] sm:flex-wrap"
+          class="flex items-center justify-between gap-[.625rem] w-full lg:gap-[3.542vw] sm:flex-wrap lg:flex-nowrap"
         >
           <!-- hamburger button for mobile size -->
           <div
-            class="flex flex-col items-center justify-center gap-1 rounded-xl p-3.5 h-12 cursor-pointer relative bg-btnGray"
+            class="flex flex-col items-center justify-center gap-1 rounded-xl p-3.5 h-12 cursor-pointer relative bg-btnGray lg:hidden"
             id="hamburger"
           >
             <span class="w-5 rounded-xl h-1 bg-dark duration-[0.4s]"></span>
@@ -30,28 +30,28 @@
             <span class="w-5 rounded-xl h-1 bg-dark duration-[0.4s]"></span>
           </div>
           <!-- logo -->
-          <div class="hidden sm:block basis-1/2">
+          <div class="hidden sm:block basis-1/2 lg:basis-0">
             <h1 class="font-bold text-logo text-[1.375rem]">MEGA.news</h1>
           </div>
           <!-- menu -->
-          <nav class="hidden" id="navMenu">
+          <nav class="hidden lg:block lg:w-auto" id="navMenu">
             <ul
-              class="lg:flex lg:items-center lg:justify-start lg:gap-[1.771vw]"
+              class="lg:flex lg:items-center lg:justify-start lg:gap-[1.771vw] w-full"
             >
               <li>
-                <a class="font-medium text-[.833vw]" href="">Categories</a>
+                <a class="font-medium text-[.75rem] xl:text-[.9rem]" href="">Categories</a>
               </li>
-              <li><a class="font-medium text-[.833vw]" href="">Pages</a></li>
+              <li><a class="font-medium text-[.75rem] xl:text-[.9rem]" href="">Pages</a></li>
               <li>
                 <a
-                  class="font-medium text-[.833vw]"
+                  class="font-medium text-[.75rem] xl:text-[.9rem]"
                   class="font-main"
                   href="contact.html"
                   >Contact Us</a
                 >
               </li>
               <li>
-                <a class="font-medium text-[.833vw]" class="" href="about.html"
+                <a class="font-medium text-[.75rem] xl:text-[.9rem]" class="" href="about.html"
                   >About Us</a
                 >
               </li>
@@ -64,15 +64,15 @@
           <form
             action=""
             method="get"
-            class="navbar-searchbox w-full flex items-center gap-[1.25rem] lg:gap-[1.042vw] bg-btnGray px-[1rem] py-[.875rem] lg:px-[.729vw] lg:py-[.755vw] rounded-xl lg:rounded-[.625vw] sm:order-2"
+            class="navbar-searchbox w-full flex items-center justify-between gap-[1.25rem] bg-btnGray px-[1rem] py-[.5rem] rounded-xl sm:order-2 lg:order-[0] lg:w-[20.78vw]"
           >
             <img
-              class="option-btn w-[1.25rem] lg:w-[1.042vw]"
+              class="option-btn w-[1.25rem]"
               src="assets/images/svg-icons/option.svg"
               alt=""
             />
             <input
-              class="bg-transparent w-full lg:w-[14.948vw] h-[.875rem] lg:h-[.729vw] text-[.75rem] lg:text-[.625vw]"
+              class="bg-transparent w-full h-[2rem] text-[.75rem] lg:text-[.75rem] pl-[.5rem]"
               placeholder="Search Anything"
               type="search"
               name="nav-search-box"
@@ -80,7 +80,7 @@
             />
             <button type="submit">
               <img
-                class="search-btn w-5 lg:w-[1.042vw]"
+                class="search-btn w-[1.25rem]"
                 src="assets/images/svg-icons/search.svg"
                 alt=""
               />
@@ -88,16 +88,12 @@
           </form>
 
           <!-- user section -->
-          <div class="hidden sm:flex items-center gap-[2.604vw]">
+          <div class="hidden sm:flex items-center gap-[.625rem]">
             <div class="flex items-center gap-[.417vw]">
               <div
                 class="w-12 h-12 flex items-center justify-center overflow-hidden border-[1px] rounded-xl"
               >
-                <img
-                  src="assets/images/avatar/14.jpg"
-                  alt=""
-                  class="w-full"
-                />
+                <img src="assets/images/avatar/14.jpg" alt="" class="w-full" />
               </div>
               <span class="font-medium text-[1rem]">Mahyar</span>
             </div>
@@ -115,23 +111,241 @@
       </section>
     </header>
     <main class="font-serif flex flex-col">
+      <!-- top tags -->
+      <section class="hidden lg:block mx-[10.625vw] lg:mx-[7.812vw] xl:mx-[10.625vw] mb-[3.75rem]">
+        <div
+          class="swiper top-tags relative rounded-xl p-[.75rem] pr-0 bg-btnGray"
+        >
+          <div class="swiper-wrapper">
+            <!--  top tags item 01 -->
+            <div class="swiper-slide -[10.625rem] h-[3rem] relative">
+              <img
+                src="assets/images/food/01.jpg"
+                alt="food"
+                class="w-full h-full object-cover rounded-xl blur-[2px]"
+              />
+              <div
+                class="absolute w-full h-full top-0 left-0 rounded-xl bg-hashtag z-10"
+              ></div>
+              <a
+                class="absolute text-white top-1/2 left-1/2 z-20 cursor-pointer text-[1rem] font-medium -translate-x-1/2 -translate-y-1/2 capitalize"
+              >
+                #food
+              </a>
+            </div>
+            <!-- top tags item 02 -->
+            <div class="swiper-slide w-[10.625rem] h-[3rem] relative">
+              <img
+                src="assets/images/animal/10.jpg"
+                alt="food"
+                class="w-full h-full object-cover rounded-xl blur-[2px]"
+              />
+              <div
+                class="absolute w-full h-full top-0 left-0 rounded-xl bg-hashtag z-10"
+              ></div>
+              <a
+                class="absolute text-white top-1/2 left-1/2 z-20 cursor-pointer text-[1rem] font-medium -translate-x-1/2 -translate-y-1/2 capitalize"
+              >
+                #animal
+              </a>
+            </div>
+            <!-- top tags item 03 -->
+            <div class="swiper-slide w-[10.625rem] h-[3rem] relative">
+              <img
+                src="assets/images/car/04.jpg"
+                alt="food"
+                class="w-full h-full object-cover rounded-xl blur-[2px]"
+              />
+              <div
+                class="absolute w-full h-full top-0 left-0 rounded-xl bg-hashtag z-10"
+              ></div>
+              <a
+                class="absolute text-white top-1/2 left-1/2 z-20 cursor-pointer text-[1rem] font-medium -translate-x-1/2 -translate-y-1/2 capitalize"
+              >
+                #car
+              </a>
+            </div>
+            <!-- top tags item 04 -->
+            <div class="swiper-slide w-[10.625rem] h-[3rem] relative">
+              <img
+                src="assets/images/sport/06.jpg"
+                alt="food"
+                class="w-full h-full object-cover rounded-xl blur-[2px]"
+              />
+              <div
+                class="absolute w-full h-full top-0 left-0 rounded-xl bg-hashtag z-10"
+              ></div>
+              <a
+                class="absolute text-white top-1/2 left-1/2 z-20 cursor-pointer text-[1rem] font-medium -translate-x-1/2 -translate-y-1/2 capitalize"
+              >
+                #sport
+              </a>
+            </div>
+            <!-- top tags item 05 -->
+            <div class="swiper-slide w-[10.625rem] h-[3rem] relative">
+              <img
+                src="assets/images/music/06.png"
+                alt="food"
+                class="w-full h-full object-cover rounded-xl blur-[2px]"
+              />
+              <div
+                class="absolute w-full h-full top-0 left-0 rounded-xl bg-hashtag z-10"
+              ></div>
+              <a
+                class="absolute text-white top-1/2 left-1/2 z-20 cursor-pointer text-[1rem] font-medium -translate-x-1/2 -translate-y-1/2 capitalize"
+              >
+                #music
+              </a>
+            </div>
+            <!-- top tags item 06 -->
+            <div class="swiper-slide w-[10.625rem] h-[3rem] relative">
+              <img
+                src="assets/images/technology/03.jpg"
+                alt="food"
+                class="w-full h-full object-cover rounded-xl blur-[2px]"
+              />
+              <div
+                class="absolute w-full h-full top-0 left-0 rounded-xl bg-hashtag z-10"
+              ></div>
+              <a
+                class="absolute text-white top-1/2 left-1/2 z-20 cursor-pointer text-[1rem] font-medium -translate-x-1/2 -translate-y-1/2 capitalize"
+              >
+                #technology
+              </a>
+            </div>
+            <!-- top tags item 07 -->
+            <div class="swiper-slide w-[10.625rem] h-[3rem] relative">
+              <img
+                src="assets/images/abstract/07.jpg"
+                alt="food"
+                class="w-full h-full object-cover rounded-xl blur-[2px]"
+              />
+              <div
+                class="absolute w-full h-full top-0 left-0 rounded-xl bg-hashtag z-10"
+              ></div>
+              <a
+                class="absolute text-white top-1/2 left-1/2 z-20 cursor-pointer text-[1rem] font-medium -translate-x-1/2 -translate-y-1/2 capitalize"
+              >
+                #abstract
+              </a>
+            </div>
+            <!-- top tags item 08 -->
+            <div class="swiper-slide w-[10.625rem] h-[3rem] relative">
+              <img
+                src="assets/images/animal/08.jpg"
+                alt="food"
+                class="w-full h-full object-cover rounded-xl blur-[2px]"
+              />
+              <div
+                class="absolute w-full h-full top-0 left-0 rounded-xl bg-hashtag z-10"
+              ></div>
+              <a
+                class="absolute text-white top-1/2 left-1/2 z-20 cursor-pointer text-[1rem] font-medium -translate-x-1/2 -translate-y-1/2 capitalize"
+              >
+                #nature
+              </a>
+            </div>
+            <!-- top tags item 09 -->
+            <div class="swiper-slide w-[10.625rem] h-[3rem] relative">
+              <img
+                src="assets/images/dance/05.jpg"
+                alt="food"
+                class="w-full h-full object-cover rounded-xl blur-[2px]"
+              />
+              <div
+                class="absolute w-full h-full top-0 left-0 rounded-xl bg-hashtag z-10"
+              ></div>
+              <a
+                class="absolute text-white top-1/2 left-1/2 z-20 cursor-pointer text-[1rem] font-medium -translate-x-1/2 -translate-y-1/2 capitalize"
+              >
+                #dance
+              </a>
+            </div>
+          </div>
+          <div
+            class="absolute right-3 top-1/2 -translate-y-1/2 bg-btnGray z-50 p-[.5rem] rounded-xl"
+          >
+            <button type="button">
+              <img
+                src="assets/images/svg-icons/right-button.svg"
+                alt=""
+                class="w-[1.5rem]"
+              />
+            </button>
+          </div>
+          <div
+            class="bg-topTagsGradient absolute top-0 right-[-1px] h-full w-[9.3rem] z-40"
+          ></div>
+        </div>
+      </section>
       <!-- slider -->
       <section
-        class="hidden sm:flex flex-col gap-[1.25rem] mb-[10.256vw] mx-[9.409vw] relative"
+        class="hidden sm:flex flex-col xl:flex-row gap-[1.25vw] mb-[6.72vw] xl:mb-[3.125vw] mx-[9.409vw] lg:mx-[7.812vw] xl:mx-[10.625vw]"
       >
-        <!-- slider   -->
+        <div class="hidden xl:basis-1/2 xl:flex gap-[1.25vw]">
+          <div class="xl:basis-1/2 relative group/box">
+            <img
+              src="assets/images/car/05.jpg"
+              alt="sport image"
+              class="rounded-xl w-full"
+            />
+
+            <!-- title -->
+            <div
+              class="hidden items-start p-[.833vw] absolute bottom-2.5 right-2.5 left-2.5 bg-play_btn_bg rounded-xl group-hover/box:block group/detail"
+            >
+              <h3 class="font-medium text-[1.302vw] text-black">
+                How to Drive a Car Safely
+              </h3>
+              <p
+                class="h-[2.5rem] overflow-hidden text-[.875rem] leading-[1.25rem] tracking-[.25px] text-[rgba(0,_0,_0,_0.75)] group-hover/detail:overflow-auto"
+              >
+                Ah, the joy of the open road—it’s a good feeling. But if you’re
+                new to driving, you may feel a little nervous about getting
+                behind the wheel. Don’t worry. While it’s true that accidents
+                can happen to anybody, there are things you can do to drive
+                safely and do your best to avoid them.
+              </p>
+            </div>
+          </div>
+
+          <div class="xl:basis-1/2 relative group/box">
+            <img
+              src="assets/images/music/08.jpg"
+              alt="sport image"
+              class="rounded-xl w-full"
+            />
+
+            <!-- title -->
+            <div
+              class="hidden items-start p-[.833vw] absolute bottom-2.5 right-2.5 left-2.5 bg-play_btn_bg rounded-xl group-hover/box:block group/detail2"
+            >
+              <h3 class="font-medium text-[1.285vw] text-black">
+                How to Make Dance Music
+              </h3>
+              <p
+                class="h-[2.5rem] overflow-hidden text-[.875rem] leading-[1.25rem] tracking-[.25px] text-[rgba(0,_0,_0,_0.75)] group-hover/detail2:overflow-auto"
+              >
+                Download torrents from verified or trusted uploaders. If you're
+                a BitTorrent user looking for safety tips, use this method. Both
+                of the big-name BitTorrent indexers (The Pirate Bay and
+                KickAssTorrents) use symbols to highlight torrents uploaded by
+                verified users.
+              </p>
+            </div>
+          </div>
+        </div>
 
         <!-- image -->
-        <div class="">
+        <div class="xl:basis-1/2 relative group">
           <img
             src="assets/images/technology/01.jpg"
             alt="sport image"
-            class="rounded-xl w-full"
+            class="rounded-xl w-full h-full object-cover"
           />
 
-          <!-- arrow section -->
           <div
-            class="flex items-center justify-between absolute top-1/2 w-full px-[2.564vw]"
+            class="hidden items-center justify-between absolute top-1/2 w-full px-[2.564vw] group-hover:flex"
           >
             <div class="bg-btnGray p-[.75rem] rounded-xl">
               <img
@@ -151,7 +365,7 @@
 
           <!-- title -->
           <div
-            class="flex items-start p-[1rem] pb-[2.5rem] absolute bottom-2.5 right-2.5 left-2.5 bg-play_btn_bg rounded-xl"
+            class="hidden items-start p-[1rem] pb-[2.5rem] absolute bottom-2.5 right-2.5 left-2.5 bg-play_btn_bg rounded-xl group-hover:flex"
           >
             <h3 class="font-medium capitalize text-[1.25rem] text-black">
               why I stopped using multiple monitor
@@ -161,12 +375,12 @@
       </section>
       <!-- popular posts -->
       <section
-        class="flex flex-col gap-[1.25rem] mx-[9.409vw] mt-[7.692vw] mb-[10.256vw]"
+        class="flex flex-col gap-[1.25rem] mx-[1rem] sm:mx-[9.409vw] lg:mx-[7.812vw] xl:mx-[10.625vw] mb-[10.256vw]"
       >
         <!-- header-section -->
         <div class="flex items-center justify-between w-full">
           <!-- popular posts header title -->
-          <div class="flex gap-[1.538vw]">
+          <div class="flex gap-[.375rem]">
             <img
               src="assets/images/svg-icons/Rectangle.svg"
               alt=""
@@ -194,7 +408,7 @@
         </div>
 
         <!-- post cards -->
-        <div class="swiper popular-posts relative">
+        <div class="swiper popular-posts">
           <div class="swiper-wrapper">
             <!-- item 01 -->
             <div
@@ -234,7 +448,7 @@
               <div
                 class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
               >
-                <div class="flex gap-[2.564vw]">
+                <div class="flex gap-[.625rem]">
                   <div class="w-[2.75rem]">
                     <img
                       src="assets/images/avatar/12.jpg"
@@ -302,7 +516,7 @@
               <div
                 class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
               >
-                <div class="flex gap-[2.564vw]">
+                <div class="flex gap-[.625rem]">
                   <div class="w-[2.75rem]">
                     <img
                       src="assets/images/avatar/01.jpg"
@@ -369,7 +583,7 @@
               <div
                 class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
               >
-                <div class="flex gap-[2.564vw]">
+                <div class="flex gap-[.625rem]">
                   <div class="w-[2.75rem]">
                     <img
                       src="assets/images/avatar/02.jpg"
@@ -436,7 +650,7 @@
               <div
                 class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
               >
-                <div class="flex gap-[2.564vw]">
+                <div class="flex gap-[.625rem]">
                   <div class="w-[2.75rem]">
                     <img
                       src="assets/images/avatar/10.jpg"
@@ -503,7 +717,7 @@
               <div
                 class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
               >
-                <div class="flex gap-[2.564vw]">
+                <div class="flex gap-[.625rem]">
                   <div class="w-[2.75rem]">
                     <img
                       src="assets/images/avatar/05.jpg"
@@ -571,7 +785,7 @@
               <div
                 class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
               >
-                <div class="flex gap-[2.564vw]">
+                <div class="flex gap-[.625rem]">
                   <div class="w-[2.75rem]">
                     <img
                       src="assets/images/avatar/03.jpg"
@@ -608,9 +822,8 @@
 
       <!-- sports widget -->
       <section>
-        <!-- calender -->
         <div
-          class="widget-container mt-[10.256vw] mb-[8.462vw] px-[4.103vw] py-[7.692vw] sm:h-[464px]"
+          class="widget-container mt-[10.256vw] mb-[8.462vw] px-[4.103vw] py-[7.692vw] h-[392px] sm:h-[464px] relative box-content"
         >
           <mask class="widget-frame">
             <polygon
@@ -619,185 +832,303 @@
             ></polygon>
           </mask>
           <div class="bg-sportWidget widget-bg bg-no-repeat"></div>
-          <div
-            class="flex flex-col z-10 relative bg-white px-[6.154vw] py-[8.718vw] rounded-xl sm:hidden"
-          >
-            <table class="text-[1rem]">
-              <tr class="h-[8.669vw]">
-                <td colspan="7"><h3 class="font-medium">Jan 2022</h3></td>
-              </tr>
-              <tr class="h-[8.669vw]">
-                <td class="text-center font-medium">Su</td>
-                <td class="text-center font-medium">Mo</td>
-                <td class="text-center font-medium">Tu</td>
-                <td class="text-center font-medium">We</td>
-                <td class="text-center font-medium">Th</td>
-                <td class="text-center font-medium">Fr</td>
-                <td class="text-center font-medium">Sa</td>
-              </tr>
-              <tr class="h-[8.669vw]">
-                <td class="text-center font-medium">26</td>
-                <td class="text-center font-medium">27</td>
-                <td class="text-center font-medium">
-                  <img
-                    src="assets/images/team/01.jpg"
-                    alt=""
-                    class="w-[4.844vw] m-auto"
-                  />
-                </td>
-                <td class="text-center font-medium">29</td>
-                <td class="text-center font-medium">30</td>
-                <td class="text-center font-medium">31</td>
-                <td class="text-center font-medium">1</td>
-              </tr>
-              <tr class="h-[8.669vw]">
-                <td class="text-center font-medium">
+          <div class="absolute flex items-center justify-center gap-[1.5rem] z-10 top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-full h-[20.875rem]">
+            <!-- calender -->
+            <div
+              class="flex flex-col z-10 relative bg-white px-[1.5rem] py-[2.125rem] rounded-xl sm:hidden xl:block w-[22.375rem] h-full"
+            >
+              <table class="text-[1rem] w-full">
+                <tr class="h-[2.114rem]">
+                  <td colspan="7"><h3 class="font-medium">Jan 2022</h3></td>
+                </tr>
+                <tr class="h-[2.114rem]">
+                  <th class="text-center font-medium text-dark50">Su</th>
+                  <th class="text-center font-medium text-dark50">Mo</th>
+                  <th class="text-center font-medium text-dark50">Tu</th>
+                  <th class="text-center font-medium text-dark50">We</th>
+                  <th class="text-center font-medium text-dark50">Th</th>
+                  <th class="text-center font-medium text-dark50">Fr</th>
+                  <th class="text-center font-medium text-dark50">Sa</th>
+                </tr>
+                <tr class="h-[2.114rem]">
+                  <td class="text-center font-medium text-dark50">26</td>
+                  <td class="text-center font-medium text-dark50">27</td>
+                  <td class="text-center font-medium text-dark50">
+                    <img
+                      src="assets/images/team/01.jpg"
+                      alt=""
+                      class="w-[1.18rem] m-auto"
+                    />
+                  </td>
+                  <td class="text-center font-medium text-dark50">29</td>
+                  <td class="text-center font-medium text-dark50">30</td>
+                  <td class="text-center font-medium text-dark50">31</td>
+                  <td class="text-center font-medium">1</td>
+                </tr>
+                <tr class="h-[2.114rem]">
+                  <td class="text-center font-medium">
+                    <img
+                      src="assets/images/team/08.jpg"
+                      alt=""
+                      class="w-[1.18rem] m-auto"
+                    />
+                  </td>
+                  <td class="text-center font-medium">3</td>
+                  <td class="text-center font-medium">4</td>
+                  <td class="text-center font-medium">5</td>
+                  <td class="text-center font-medium">6</td>
+                  <td class="text-center font-medium">7</td>
+                  <td class="text-center font-medium">8</td>
+                </tr>
+                <tr class="h-[2.114rem]">
+                  <td class="text-center font-medium">9</td>
+                  <td class="text-center font-medium">10</td>
+                  <td class="text-center font-medium">11</td>
+                  <td class="text-center font-medium">12</td>
+                  <td class="text-center font-medium">13</td>
+                  <td class="text-center font-medium">
+                    <img
+                      src="assets/images/team/05.jpg"
+                      alt=""
+                      class="w-[1.18rem] m-auto"
+                    />
+                  </td>
+                  <td class="text-center font-medium">15</td>
+                </tr>
+                <tr class="h-[2.114rem]">
+                  <td class="text-center font-medium">16</td>
+                  <td class="text-center font-medium">17</td>
+                  <td class="text-center font-medium">
+                    <img
+                      src="assets/images/team/04.jpg"
+                      alt=""
+                      class="w-[1.18rem] m-auto"
+                    />
+                  </td>
+                  <td class="text-center font-medium">19</td>
+                  <td class="text-center font-medium">20</td>
+                  <td class="text-center font-medium">21</td>
+                  <td class="text-center font-medium">22</td>
+                </tr>
+                <tr class="h-[2.114rem]">
+                  <td class="text-center font-medium">23</td>
+                  <td class="text-center font-medium">24</td>
+                  <td class="text-center font-medium">25</td>
+                  <td class="text-center font-medium">26</td>
+                  <td class="text-center font-medium">27</td>
+                  <td class="text-center font-medium">28</td>
+                  <td class="text-center font-medium">29</td>
+                </tr>
+                <tr class="h-[2.114rem]">
+                  <td class="text-center font-medium">30</td>
+                  <td class="text-center font-medium">
+                    <img
+                      src="assets/images/team/02.jpg"
+                      alt=""
+                      class="w-[1.18rem] m-auto"
+                    />
+                  </td>
+                  <td class="text-center font-medium text-dark50">1</td>
+                  <td class="text-center font-medium text-dark50">2</td>
+                  <td class="text-center font-medium text-dark50">3</td>
+                  <td class="text-center font-medium text-dark50">
+                    <img
+                      src="assets/images/team/03.jpg"
+                      alt=""
+                      class="w-[1.18rem] m-auto"
+                    />
+                  </td>
+                  <td class="text-center font-medium text-dark50">5</td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- club table -->
+            <div class="hidden xxl:block bg-white z-10 px-[1.125rem] py-[2rem] h-full rounded-xl w-[37.5rem]">
+              <table class="club text-dark w-full text-center align-middle">
+                <tr class="h-[2.114rem]">
+                  <th class="text-[1rem] font-medium text-left">Club</th>
+                  <th class="text-dark50 text-[1rem] font-medium w-[3rem]">GP</th>
+                  <th class="text-dark50 text-[1rem] font-medium w-[3rem]">W</th>
+                  <th class="text-dark50 text-[1rem] font-medium w-[3rem]">D</th>
+                  <th class="text-dark50 text-[1rem] font-medium w-[3rem]">L</th>
+                  <th class="text-dark50 text-[1rem] font-medium w-[3rem]">F</th>
+                  <th class="text-dark50 text-[1rem] font-medium w-[3rem]">A</th>
+                  <th class="text-dark50 text-[1rem] font-medium w-[3rem]">GD</th>
+                  <th class="text-dark50 text-[1rem] font-medium w-[3rem]">Pts</th>
+                </tr>
+
+                <tr class="h-[2.114rem]">
+                  <td class="flex items-center gap-[.5rem] justify-start text-[.813rem]">
+                    <span>1</span>
+                    <img src="assets/images/team/08.jpg" alt="" class="w-[1.5rem]">
+                    <h4 class="capitalize">manchester united</h4>
+                  </td>
+                  <td>38</td>
+                  <td>29</td>
+                  <td>6</td>
+                  <td>3</td>
+                  <td>99</td>
+                  <td>26</td>
+                  <td>73</td>
+                  <td>93</td>
+                </tr>
+
+                <tr class="h-[2.114rem]">
+                  <td class="flex items-center gap-[.5rem] justify-start text-[.813rem]">
+                    <span>2</span>
+                    <img src="assets/images/team/07.jpg" alt="" class="w-[1.5rem]">
+                    <h4 class="capitalize">liverpool</h4>
+                  </td>
+                  <td>38</td>
+                  <td>28</td>
+                  <td>8</td>
+                  <td>2</td>
+                  <td>94</td>
+                  <td>26</td>
+                  <td>68</td>
+                  <td>92</td>
+                </tr>
+
+                <tr class="h-[2.114rem]">
+                  <td class="flex items-center gap-[.5rem] justify-start text-[.813rem]">
+                    <span>3</span>
+                    <img src="assets/images/team/06.jpg" alt="" class="w-[1.5rem]">
+                    <h4 class="capitalize">chelsea</h4>
+                  </td>
+                  <td>38</td>
+                  <td>21</td>
+                  <td>11</td>
+                  <td>6</td>
+                  <td>76</td>
+                  <td>33</td>
+                  <td>43</td>
+                  <td>74</td>
+                </tr>
+
+                <tr class="h-[2.114rem]">
+                  <td class="flex items-center gap-[.5rem] justify-start text-[.813rem]">
+                    <span>4</span>
+                    <img src="assets/images/team/05.jpg" alt="" class="w-[1.5rem]">
+                    <h4 class="capitalize">tottenham hotspur</h4>
+                  </td>
+                  <td>38</td>
+                  <td>22</td>
+                  <td>5</td>
+                  <td>11</td>
+                  <td>69</td>
+                  <td>40</td>
+                  <td>29</td>
+                  <td>71</td>
+                </tr>
+
+                <tr class="h-[2.114rem]">
+                  <td class="flex items-center gap-[.5rem] justify-start text-[.813rem]">
+                    <span>5</span>
+                    <img src="assets/images/team/04.jpg" alt="" class="w-[1.5rem]">
+                    <h4 class="capitalize">arsenal</h4>
+                  </td>
+                  <td>38</td>
+                  <td>22</td>
+                  <td>3</td>
+                  <td>13</td>
+                  <td>61</td>
+                  <td>48</td>
+                  <td>13</td>
+                  <td>69</td>
+                </tr>
+
+                <tr class="h-[2.114rem]">
+                  <td class="flex items-center gap-[.5rem] justify-start text-[.813rem]">
+                    <span>6</span>
+                    <img src="assets/images/team/09.jpg" alt="" class="w-[1.5rem]">
+                    <h4 class="capitalize">manchester city</h4>
+                  </td>
+                  <td>38</td>
+                  <td>16</td>
+                  <td>10</td>
+                  <td>12</td>
+                  <td>57</td>
+                  <td>57</td>
+                  <td>0</td>
+                  <td>58</td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- competition section -->
+            <div
+              class="hidden sm:flex flex-col items-center  z-10 bg-white rounded-xl w-[30rem] px-[1rem] py-[2rem] h-full"
+            >
+              <!-- title -->
+              <div>
+                <span class="capitalize font-medium text-[1rem] text-dark"
+                  >the final round</span
+                >
+              </div>
+
+              <!-- team flag -->
+              <div class="flex justify-between items-end">
+                <div class="w-[9rem]">
                   <img
                     src="assets/images/team/08.jpg"
-                    alt=""
-                    class="w-[4.844vw] m-auto"
+                    alt="man united"
+                    class="w-full"
                   />
-                </td>
-                <td class="text-center font-medium">3</td>
-                <td class="text-center font-medium">4</td>
-                <td class="text-center font-medium">5</td>
-                <td class="text-center font-medium">6</td>
-                <td class="text-center font-medium">7</td>
-                <td class="text-center font-medium">8</td>
-              </tr>
-              <tr class="h-[8.669vw]">
-                <td class="text-center font-medium">9</td>
-                <td class="text-center font-medium">10</td>
-                <td class="text-center font-medium">11</td>
-                <td class="text-center font-medium">12</td>
-                <td class="text-center font-medium">13</td>
-                <td class="text-center font-medium">
-                  <img
-                    src="assets/images/team/05.jpg"
-                    alt=""
-                    class="w-[4.844vw] m-auto"
-                  />
-                </td>
-                <td class="text-center font-medium">15</td>
-              </tr>
-              <tr class="h-[8.669vw]">
-                <td class="text-center font-medium">16</td>
-                <td class="text-center font-medium">17</td>
-                <td class="text-center font-medium">
-                  <img
-                    src="assets/images/team/04.jpg"
-                    alt=""
-                    class="w-[4.844vw] m-auto"
-                  />
-                </td>
-                <td class="text-center font-medium">19</td>
-                <td class="text-center font-medium">20</td>
-                <td class="text-center font-medium">21</td>
-                <td class="text-center font-medium">22</td>
-              </tr>
-              <tr class="h-[8.669vw]">
-                <td class="text-center font-medium">23</td>
-                <td class="text-center font-medium">24</td>
-                <td class="text-center font-medium">25</td>
-                <td class="text-center font-medium">26</td>
-                <td class="text-center font-medium">27</td>
-                <td class="text-center font-medium">28</td>
-                <td class="text-center font-medium">29</td>
-              </tr>
-              <tr class="h-[8.669vw]">
-                <td class="text-center font-medium">30</td>
-                <td class="text-center font-medium">
-                  <img
-                    src="assets/images/team/02.jpg"
-                    alt=""
-                    class="w-[4.844vw] m-auto"
-                  />
-                </td>
-                <td class="text-center font-medium">1</td>
-                <td class="text-center font-medium">2</td>
-                <td class="text-center font-medium">3</td>
-                <td class="text-center font-medium">
-                  <img
-                    src="assets/images/team/03.jpg"
-                    alt=""
-                    class="w-[4.844vw] m-auto"
-                  />
-                </td>
-                <td class="text-center font-medium">5</td>
-              </tr>
-            </table>
-          </div>
-
-          <!-- resualt section -->
-          <div
-            class="hidden sm:flex flex-col items-center absolute z-10 top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] bg-white rounded-xl w-[30rem] px-[1rem] py-[2rem]"
-          >
-            <!-- title -->
-            <div>
-              <span class="capitalize font-medium text-[1rem] text-dark"
-                >the final round</span
-              >
-            </div>
-
-            <!-- team flag -->
-            <div class="flex justify-between items-end">
-              <div class="w-[9rem]">
-                <img
-                  src="assets/images/team/08.jpg"
-                  alt="man united"
-                  class="w-full"
-                />
-              </div>
-              <div class="flex flex-col items-center justify-end gap-[1.5rem]">
-                <p
-                  class="capitalize text-[#F81539] font-semibold text-[2.5rem] tracking-[5px]"
+                </div>
+                <div
+                  class="flex flex-col items-center justify-end gap-[1.5rem]"
                 >
-                  v s
-                </p>
-                <p class="capitalize">sunday , august 8th</p>
+                  <p
+                    class="capitalize text-[#F81539] font-semibold text-[2.5rem] tracking-[5px]"
+                  >
+                    v s
+                  </p>
+                  <p class="capitalize">sunday , august 8th</p>
+                </div>
+                <div class="w-[9rem]">
+                  <img
+                    src="assets/images/team/06.jpg"
+                    alt="manchester city"
+                    class="w-full"
+                  />
+                </div>
               </div>
-              <div class="w-[9rem]">
-                <img
-                  src="assets/images/team/06.jpg"
-                  alt="manchester city"
-                  class="w-full"
-                />
-              </div>
-            </div>
 
-            <!-- match resualt -->
-            <div
-              class="flex items-center justify-center mt-[2.375rem] text-white"
-            >
+              <!-- match resualt -->
               <div
-                class="w-[9.8rem] h-[2.375rem] flex bg-[#df1f23] items-center justify-center rounded-l-xl"
+                class="flex items-center justify-center mt-[2.375rem] text-white"
               >
-                <p class="capitalize font-medium text-[1rem]">
-                  Manchester United
-                </p>
-              </div>
-              <div
-                class="border-[#E6E6E6] border-2 rounded-l-xl border-r-0 bg-dark"
-              >
-                <p
-                  class="px-[1.2rem] py-[.87rem] leading-[29px] text-[1.56rem]"
+                <div
+                  class="w-[9.8rem] h-[2.375rem] flex bg-[#df1f23] items-center justify-center rounded-l-xl"
                 >
-                  00
-                </p>
-              </div>
-              <div class="border-[#E6E6E6] border-2 rounded-r-xl bg-dark">
-                <p
-                  class="px-[1.2rem] py-[.87rem] leading-[29px] text-[1.56rem]"
+                  <p class="capitalize font-medium text-[1rem]">
+                    Manchester United
+                  </p>
+                </div>
+                <div
+                  class="border-[#E6E6E6] border-2 rounded-l-xl border-r-0 bg-dark"
                 >
-                  00
-                </p>
-              </div>
-              <div
-                class="w-[9.8rem] h-[2.375rem] flex bg-[#2F5C9F] items-center justify-center rounded-r-xl"
-              >
-                <p class="capitalize font-medium text-[1rem]">
-                  manchester city
-                </p>
+                  <p
+                    class="px-[1.2rem] py-[.87rem] leading-[29px] text-[1.56rem]"
+                  >
+                    00
+                  </p>
+                </div>
+                <div class="border-[#E6E6E6] border-2 rounded-r-xl bg-dark">
+                  <p
+                    class="px-[1.2rem] py-[.87rem] leading-[29px] text-[1.56rem]"
+                  >
+                    00
+                  </p>
+                </div>
+                <div
+                  class="w-[9.8rem] h-[2.375rem] flex bg-[#2F5C9F] items-center justify-center rounded-r-xl"
+                >
+                  <p class="capitalize font-medium text-[1rem]">
+                    chelsea
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -806,12 +1137,12 @@
 
       <!-- new posts -->
       <section
-        class="flex flex-col gap-[1.25rem] sm:gap-[1.875rem] mx-[1rem] mt-[1.875rem] sm:mx-[4.375rem]"
+        class="flex flex-col gap-[1.25rem] sm:gap-[1.875rem] mx-[1rem] mt-[1.875rem] sm:mx-[9.409vw] lg:mx-[7.812vw] xl:mx-[10.625vw]"
       >
         <!-- header-section -->
         <div class="flex items-center justify-between w-full sm:px-[2rem]">
           <!-- new posts header title -->
-          <div class="flex gap-[1.538vw]">
+          <div class="flex gap-[.375rem]">
             <img
               src="assets/images/svg-icons/Rectangle.svg"
               alt=""
@@ -856,14 +1187,14 @@
         </div>
 
         <!-- post cards -->
-        <div class="swiper new-posts sm:p-[2rem]">
-          <div class="swiper-wrapper">
+        <div class="swiper new-posts sm:p-[2rem] ">
+          <div class="swiper-wrapper xl:grid xl:grid-cols-2 xl:gap-[1.5rem]">
             <!-- item 01 -->
             <div
-              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl flex flex-col sm:flex-row flex-nowrap sm:gap-[.625rem] sm:h-auto"
+              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl flex flex-col sm:flex-row flex-nowrap sm:gap-[.625rem] sm:h-auto xl:grid xl:grid-cols-[40%_60%]"
             >
               <!-- image -->
-              <div class="sm:flex-[1] h-[11.625rem] sm:h-[11.875rem]">
+              <div class="sm:flex-[1] h-[11.625rem] sm:h-[11.875rem] xl:size-full">
                 <img
                   src="assets/images/technology/04.jpg"
                   alt="sport image"
@@ -876,7 +1207,7 @@
                 <!-- title -->
                 <div class="py-[.5rem] pl-[.375rem] pr-[.25rem]">
                   <h3
-                    class="font-medium text-[1rem] text-dark w-[34.5vw] overflow-hidden h-[19px]"
+                    class="font-medium text-[1rem] text-dark w-full overflow-hidden h-[19px]"
                   >
                     12 Mobile UX Design Trends For 2018
                   </h3>
@@ -897,7 +1228,7 @@
                 <div
                   class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
                 >
-                  <div class="flex gap-[2.564vw]">
+                  <div class="flex gap-[.625rem]">
                     <div class="w-[2.75rem]">
                       <img
                         src="assets/images/avatar/10.jpg"
@@ -930,7 +1261,7 @@
             </div>
             <!-- item 02 -->
             <div
-              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl flex flex-col sm:flex-row flex-nowrap sm:gap-[.625rem] sm:h-auto"
+              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl flex flex-col sm:flex-row flex-nowrap sm:gap-[.625rem] sm:h-auto xl:grid xl:grid-cols-[40%_60%]"
             >
               <!-- image -->
               <div class="sm:flex-[1] h-[11.625rem] sm:h-[11.875rem]">
@@ -946,7 +1277,7 @@
                 <!-- title -->
                 <div class="py-[.5rem] pl-[.375rem] pr-[.25rem]">
                   <h3
-                    class="font-medium text-[1rem] text-dark w-[34.5vw] overflow-hidden h-[19px]"
+                    class="font-medium text-[1rem] text-dark w-full overflow-hidden h-[19px]"
                   >
                     No boat bottomfish: Jetty fishing on the Washington Coast
                   </h3>
@@ -967,7 +1298,7 @@
                 <div
                   class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
                 >
-                  <div class="flex gap-[2.564vw]">
+                  <div class="flex gap-[.625rem]">
                     <div class="w-[2.75rem]">
                       <img
                         src="assets/images/avatar/01.jpg"
@@ -1000,7 +1331,7 @@
             </div>
             <!-- item 03 -->
             <div
-              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl flex flex-col sm:flex-row flex-nowrap sm:gap-[.625rem] sm:h-auto"
+              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl flex flex-col sm:flex-row flex-nowrap sm:gap-[.625rem] sm:h-auto xl:grid xl:grid-cols-[40%_60%]"
             >
               <!-- image -->
               <div class="sm:flex-[1] h-[11.625rem] sm:h-[11.875rem]">
@@ -1016,7 +1347,7 @@
                 <!-- title -->
                 <div class="py-[.5rem] pl-[.375rem] pr-[.25rem]">
                   <h3
-                    class="font-medium text-[1rem] text-dark w-[34.5vw] overflow-hidden h-[19px]"
+                    class="font-medium text-[1rem] text-dark w-full overflow-hidden h-[19px]"
                   >
                     What a Disabled Squirrel Taught Me About Life, Work, and
                     Love
@@ -1038,7 +1369,7 @@
                 <div
                   class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
                 >
-                  <div class="flex gap-[2.564vw]">
+                  <div class="flex gap-[.625rem]">
                     <div class="w-[2.75rem]">
                       <img
                         src="assets/images/avatar/12.jpg"
@@ -1071,7 +1402,7 @@
             </div>
             <!-- item 04 -->
             <div
-              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl flex flex-col sm:flex-row flex-nowrap sm:gap-[.625rem] sm:h-auto"
+              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl flex flex-col sm:flex-row flex-nowrap sm:gap-[.625rem] sm:h-auto xl:grid xl:grid-cols-[40%_60%]"
             >
               <!-- image -->
               <div class="sm:flex-[1] h-[11.625rem] sm:h-[11.875rem]">
@@ -1087,7 +1418,7 @@
                 <!-- title -->
                 <div class="py-[.5rem] pl-[.375rem] pr-[.25rem]">
                   <h3
-                    class="font-medium text-[1rem] text-dark w-[34.5vw] overflow-hidden h-[19px]"
+                    class="font-medium text-[1rem] text-dark w-full overflow-hidden h-[19px]"
                   >
                     Becoming a Self-Driving Car & Machine Learning Engineer
                   </h3>
@@ -1108,7 +1439,7 @@
                 <div
                   class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
                 >
-                  <div class="flex gap-[2.564vw]">
+                  <div class="flex gap-[.625rem]">
                     <div class="w-[2.75rem]">
                       <img
                         src="assets/images/avatar/05.jpg"
@@ -1141,7 +1472,7 @@
             </div>
             <!-- item 05 -->
             <div
-              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl flex flex-col sm:flex-row flex-nowrap sm:gap-[.625rem] sm:h-auto"
+              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl flex flex-col sm:flex-row flex-nowrap sm:gap-[.625rem] sm:h-auto xl:grid xl:grid-cols-[40%_60%]"
             >
               <!-- image -->
               <div class="sm:flex-[1] h-[11.625rem] sm:h-[11.875rem]">
@@ -1157,7 +1488,7 @@
                 <!-- title -->
                 <div class="py-[.5rem] pl-[.375rem] pr-[.25rem]">
                   <h3
-                    class="font-medium text-[1rem] text-dark w-[34.5vw] overflow-hidden h-[19px]"
+                    class="font-medium text-[1rem] text-dark w-full overflow-hidden h-[19px]"
                   >
                     How to Become a Master Designer
                   </h3>
@@ -1179,7 +1510,7 @@
                 <div
                   class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
                 >
-                  <div class="flex gap-[2.564vw]">
+                  <div class="flex gap-[.625rem]">
                     <div class="w-[2.75rem]">
                       <img
                         src="assets/images/avatar/03.jpg"
@@ -1212,7 +1543,7 @@
             </div>
             <!-- item 06 -->
             <div
-              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl flex flex-col sm:flex-row flex-nowrap sm:gap-[.625rem] sm:h-auto"
+              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl flex flex-col sm:flex-row flex-nowrap sm:gap-[.625rem] sm:h-auto xl:grid xl:grid-cols-[40%_60%]"
             >
               <!-- image -->
               <div class="sm:flex-[1] h-[11.625rem] sm:h-[11.875rem]">
@@ -1228,7 +1559,7 @@
                 <!-- title -->
                 <div class="py-[.5rem] pl-[.375rem] pr-[.25rem]">
                   <h3
-                    class="font-medium text-[1rem] text-dark w-[34.5vw] overflow-hidden h-[19px]"
+                    class="font-medium text-[1rem] text-dark w-full overflow-hidden h-[19px]"
                   >
                     This free course can teach you music programming basics in
                     less than an hour
@@ -1250,7 +1581,7 @@
                 <div
                   class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
                 >
-                  <div class="flex gap-[2.564vw]">
+                  <div class="flex gap-[.625rem]">
                     <div class="w-[2.75rem]">
                       <img
                         src="assets/images/avatar/04.jpg"
@@ -1292,7 +1623,7 @@
         <!-- header-section -->
         <div class="flex items-center justify-between w-full">
           <!-- popular posts header title -->
-          <div class="flex gap-[1.538vw]">
+          <div class="flex gap-[.375rem]">
             <img
               src="assets/images/svg-icons/Rectangle.svg"
               alt=""
@@ -1374,12 +1705,12 @@
 
       <!-- trendy posts -->
       <section
-        class="flex flex-col gap-[1.25rem] mx-[4.103vw] mt-[7.692vw] mb-[10.256vw]"
+        class="flex flex-col gap-[1.25rem] mx-[1rem] sm:mx-[9.409vw] lg:mx-[7.812vw] xl:mx-[10.625vw]  mt-[7.692vw] mb-[10.256vw]"
       >
         <!-- header-section -->
         <div class="flex items-center justify-between w-full">
           <!-- popular posts header title -->
-          <div class="flex gap-[1.538vw]">
+          <div class="flex gap-[.375rem]">
             <img
               src="assets/images/svg-icons/Rectangle.svg"
               alt=""
@@ -1410,8 +1741,9 @@
         <div class="swiper trendy-posts">
           <div class="swiper-wrapper">
             <!-- item 01 -->
-            <div 
-            class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl">
+            <div
+              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl"
+            >
               <!-- image -->
               <div class="h-[11.625rem] sm:h-[12.5rem] lg:h-[11.875rem]">
                 <img
@@ -1442,7 +1774,7 @@
               <div
                 class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
               >
-                <div class="flex gap-[2.564vw]">
+                <div class="flex gap-[.625rem]">
                   <div class="w-[2.75rem]">
                     <img
                       src="assets/images/avatar/02.jpg"
@@ -1510,7 +1842,7 @@
               <div
                 class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
               >
-                <div class="flex gap-[2.564vw]">
+                <div class="flex gap-[.625rem]">
                   <div class="w-[2.75rem]">
                     <img
                       src="assets/images/avatar/12.jpg"
@@ -1578,7 +1910,7 @@
               <div
                 class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
               >
-                <div class="flex gap-[2.564vw]">
+                <div class="flex gap-[.625rem]">
                   <div class="w-[2.75rem]">
                     <img
                       src="assets/images/avatar/01.jpg"
@@ -1645,7 +1977,7 @@
               <div
                 class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
               >
-                <div class="flex gap-[2.564vw]">
+                <div class="flex gap-[.625rem]">
                   <div class="w-[2.75rem]">
                     <img
                       src="assets/images/avatar/12.jpg"
@@ -1712,7 +2044,7 @@
               <div
                 class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
               >
-                <div class="flex gap-[2.564vw]">
+                <div class="flex gap-[.625rem]">
                   <div class="w-[2.75rem]">
                     <img
                       src="assets/images/avatar/12.jpg"
@@ -1779,7 +2111,7 @@
               <div
                 class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
               >
-                <div class="flex gap-[2.564vw]">
+                <div class="flex gap-[.625rem]">
                   <div class="w-[2.75rem]">
                     <img
                       src="assets/images/avatar/12.jpg"
@@ -1847,7 +2179,7 @@
               <div
                 class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
               >
-                <div class="flex gap-[2.564vw]">
+                <div class="flex gap-[.625rem]">
                   <div class="w-[2.75rem]">
                     <img
                       src="assets/images/avatar/12.jpg"
@@ -1878,23 +2210,23 @@
               </div>
             </div>
           </div>
-        </div>  
+        </div>
       </section>
 
       <!-- weather section -->
-      <section class="px-[3.846vw] py-[11.538vw] bg-btnGray">
+      <section class="px-[3.846vw] py-[11.538vw] sm:px-[10.625vw] lg:px-[7.812vw] xl:px-[10.625vw] bg-btnGray sm:grid sm:grid-cols-2 sm:gap-[1.5rem]">
         <div
-          class="w-full h-[62.821vw] bg-weatherImg bg rounded-xl"
-          id="weather"
+          class="w-full h-full bg-weatherImg1 bg rounded-xl"
+          id="weather1"
         >
           <div
-            class="weather-gradient opacity-80 bg-weatherGrdt z-20 rounded-xl"
+            class="weather-gradient opacity-80 bg-weatherGrdt1 z-20 rounded-xl"
           ></div>
           <div
             class="weather-gradient opacity-25 bg-black z-10 rounded-xl"
           ></div>
           <div
-            class="relative z-50 text-white p-[1.563rem] pb-[3.5rem] grid grid-cols-2 gap-y-[13.333vw]"
+            class="relative z-50 text-white p-[1.563rem] pb-[3.5rem] grid grid-cols-2 gap-y-[3.25rem]"
           >
             <div class="flex flex-col gap-[.5rem]">
               <p class="text-[.75rem] font-normal">Precipitation: 0%</p>
@@ -1908,15 +2240,135 @@
               </p>
             </div>
             <div
-              class="flex items-center justify-center gap-[4.615vw] col-span-2"
+              class="flex items-center justify-center gap-[1.125rem] col-span-2"
             >
               <img
-                src="assets/images/svg-icons/weather.svg"
+                src="assets/images/svg-icons/weather-sunny.svg"
                 alt=""
-                class="w-[14.615vw]"
+                class="w-[3.563rem]"
               />
               <div class="flex items-start">
-                <p class="text-[12.564vw] leading-[14.615vw]">32</p>
+                <p class="text-[3rem] leading-[3.563rem]">32</p>
+                <p class="text-[1rem] font-medium">°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full h-full bg-weatherImg2 bg rounded-xl hidden sm:block"
+          id="weather2"
+        >
+          <div
+            class="weather-gradient opacity-80 bg-weatherGrdt2 z-20 rounded-xl"
+          ></div>
+          <div
+            class="weather-gradient opacity-25 bg-black z-10 rounded-xl"
+          ></div>
+          <div
+            class="relative z-50 text-white p-[1.563rem] pb-[3.5rem] grid grid-cols-2 gap-y-[3.25rem]"
+          >
+            <div class="flex flex-col gap-[.5rem]">
+              <p class="text-[.75rem] font-normal">Precipitation: 18%</p>
+              <p class="text-[.75rem] font-normal">Humidity: 32%</p>
+              <p class="text-[.75rem] font-normal">Wind: 16 Km/H</p>
+            </div>
+            <div class="flex flex-col justify-between text-right">
+              <p class="text-[1.25rem] font-medium">Alaska</p>
+              <p class="text-[.875rem] leading-[1.25rem] tracking-[.25px]">
+                Tuesday 3:00 AM
+              </p>
+            </div>
+            <div
+              class="flex items-center justify-center gap-[1.125rem] col-span-2"
+            >
+              <img
+                src="assets/images/svg-icons/weather-snow.svg"
+                alt=""
+                class="w-[3.563rem]"
+              />
+              <div class="flex items-start">
+                <p class="text-[3rem] leading-[3.563rem]">16</p>
+                <p class="text-[1rem] font-medium">°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full h-full bg-weatherImg3 bg rounded-xl hidden lg:block"
+          id="weather3"
+        >
+          <div
+            class="weather-gradient opacity-80 bg-weatherGrdt3 z-20 rounded-xl"
+          ></div>
+          <div
+            class="weather-gradient opacity-25 bg-black z-10 rounded-xl"
+          ></div>
+          <div
+            class="relative z-50 text-white p-[1.563rem] pb-[3.5rem] grid grid-cols-2 gap-y-[3.25rem]"
+          >
+            <div class="flex flex-col gap-[.5rem]">
+              <p class="text-[.75rem] font-normal">Precipitation: 70%</p>
+              <p class="text-[.75rem] font-normal">Humidity: 50%</p>
+              <p class="text-[.75rem] font-normal">Wind: 14 Km/H</p>
+            </div>
+            <div class="flex flex-col justify-between text-right">
+              <p class="text-[1.25rem] font-medium">Berlin</p>
+              <p class="text-[.875rem] leading-[1.25rem] tracking-[.25px]">
+                Tuesday 1:00 PM
+              </p>
+            </div>
+            <div
+              class="flex items-center justify-center gap-[1.125rem] col-span-2"
+            >
+              <img
+                src="assets/images/svg-icons/weather-rainy.svg"
+                alt=""
+                class="w-[3.563rem]"
+              />
+              <div class="flex items-start">
+                <p class="text-[3rem] leading-[3.563rem]">24</p>
+                <p class="text-[1rem] font-medium">°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full h-full bg-weatherImg4 bg rounded-xl hidden lg:block"
+          id="weather4"
+        >
+          <div
+            class="weather-gradient opacity-80 bg-weatherGrdt4 z-20 rounded-xl"
+          ></div>
+          <div
+            class="weather-gradient opacity-25 bg-black z-10 rounded-xl"
+          ></div>
+          <div
+            class="relative z-50 text-white p-[1.563rem] pb-[3.5rem] grid grid-cols-2 gap-y-[3.25rem]"
+          >
+            <div class="flex flex-col gap-[.5rem]">
+              <p class="text-[.75rem] font-normal">Precipitation: 10%</p>
+              <p class="text-[.75rem] font-normal">Humidity: 44%</p>
+              <p class="text-[.75rem] font-normal">Wind: 14 Km/H</p>
+            </div>
+            <div class="flex flex-col justify-between text-right">
+              <p class="text-[1.25rem] font-medium">Paris</p>
+              <p class="text-[.875rem] leading-[1.25rem] tracking-[.25px]">
+                Tuesday 10:00 PM
+              </p>
+            </div>
+            <div
+              class="flex items-center justify-center gap-[1.125rem] col-span-2"
+            >
+              <img
+                src="assets/images/svg-icons/weather-moon-cloud.svg"
+                alt=""
+                class="w-[3.563rem]"
+              />
+              <div class="flex items-start">
+                <p class="text-[3rem] leading-[3.563rem]">27</p>
                 <p class="text-[1rem] font-medium">°C</p>
               </div>
             </div>
@@ -1926,12 +2378,12 @@
 
       <!-- top posts -->
       <section
-        class="flex flex-col gap-[1.25rem] mx-[4.103vw] mt-[7.692vw] mb-[10.256vw]"
+        class="flex flex-col gap-[1.25rem] mx-[1rem] sm:mx-[9.409vw] lg:mx-[7.812vw] xl:mx-[10.625vw] mt-[7.692vw] mb-[10.256vw]"
       >
         <!-- header-section -->
         <div class="flex items-center justify-between w-full">
           <!-- popular posts header title -->
-          <div class="flex gap-[1.538vw]">
+          <div class="flex gap-[.375rem]">
             <img
               src="assets/images/svg-icons/Rectangle.svg"
               alt=""
@@ -1959,70 +2411,483 @@
         </div>
 
         <!-- post cards -->
-        <div class="shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl">
-          <!-- image -->
-          <div>
-            <img
-              src="assets/images/sport/01.jpg"
-              alt="sport image"
-              class="rounded-xl w-full"
-            />
-          </div>
-
-          <!-- title -->
-          <div class="py-[1rem] pl-[.375rem] pr-[.25rem]">
-            <h3 class="font-medium capitalize text-[1rem] text-dark">
-              house boating on lake shasta
-            </h3>
-          </div>
-
-          <!-- Explanation -->
-          <div class="pb-[1rem] pl-[.375rem] pr-[.25rem]">
-            <p
-              class="font-normal text-dark text-[.875rem] opacity-75 leading-[1.25rem] tracking-[.064vw] capitalize overflow-hidden h-[2.5rem]"
+        <div class="swiper top-posts">
+          <div class="swiper-wrapper">
+            <!-- item 01 -->
+            <div
+              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl"
             >
-              the best way to spend a long 4th of july weekend. wake boarding,
-              swimming, barbecues, and bonfires.
-            </p>
-          </div>
-
-          <!-- info -->
-          <div
-            class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
-          >
-            <div class="flex gap-[2.564vw]">
-              <div class="w-[2.75rem]">
+              <!-- image -->
+              <div class="h-[11.625rem] sm:h-[12.5rem] lg:h-[11.875rem]">
                 <img
-                  src="assets/images/avatar/12.jpg"
-                  alt="avatar 12"
-                  class="w-full rounded-xl"
+                  src="assets/images/sport/01.jpg"
+                  alt="sport image"
+                  class="rounded-xl w-full main-img"
                 />
               </div>
-              <div class="flex flex-col justify-between">
-                <h4
-                  class="font-medium text-[.875rem] leading-[1.375rem] tracking-[.1px] text-dark"
-                >
-                  James
-                </h4>
+
+              <!-- title -->
+              <div class="py-[1rem] pl-[.375rem] pr-[.25rem]">
+                <h3 class="font-medium capitalize text-[1rem] text-dark">
+                  house boating on lake shasta
+                </h3>
+              </div>
+
+              <!-- Explanation -->
+              <div class="pb-[1rem] pl-[.375rem] pr-[.25rem]">
                 <p
-                  class="font-normal text-[.75rem] leading-[1.125rem] tracking-[.25px] text-dark opacity-75"
+                  class="font-normal text-dark text-[.875rem] opacity-75 leading-[1.25rem] tracking-[.064vw] capitalize overflow-hidden h-[2.5rem]"
                 >
-                  July 14 , 2022
+                  the best way to spend a long 4th of july weekend. wake
+                  boarding, swimming, barbecues, and bonfires.
                 </p>
               </div>
+
+              <!-- info -->
+              <div
+                class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
+              >
+                <div class="flex gap-[.625rem]">
+                  <div class="w-[2.75rem]">
+                    <img
+                      src="assets/images/avatar/12.jpg"
+                      alt="avatar 12"
+                      class="w-full rounded-xl"
+                    />
+                  </div>
+                  <div class="flex flex-col justify-between">
+                    <h4
+                      class="font-medium text-[.875rem] leading-[1.375rem] tracking-[.1px] text-dark"
+                    >
+                      James
+                    </h4>
+                    <p
+                      class="font-normal text-[.75rem] leading-[1.125rem] tracking-[.25px] text-dark opacity-75"
+                    >
+                      July 14 , 2022
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="assets/images/svg-icons/save-button.svg"
+                    alt=""
+                    class="opacity-50 w-[1.25rem]"
+                  />
+                </div>
+              </div>
             </div>
-            <div>
-              <img
-                src="assets/images/svg-icons/save-button.svg"
-                alt=""
-                class="opacity-50 w-[1.25rem]"
-              />
+            <!-- item 02 -->
+            <div
+              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl"
+            >
+              <!-- image -->
+              <div class="h-[11.625rem] sm:h-[12.5rem] lg:h-[11.875rem]">
+                <img
+                  src="assets/images/technology/07.jpg"
+                  alt="sport image"
+                  class="rounded-xl w-full main-img"
+                />
+              </div>
+
+              <!-- title -->
+              <div class="py-[1rem] pl-[.375rem] pr-[.25rem]">
+                <h3
+                  class="font-medium text-[1rem] h-[1.2rem] overflow-hidden text-dark"
+                >
+                  How to choose the right laptop for programming
+                </h3>
+              </div>
+
+              <!-- Explanation -->
+              <div class="pb-[1rem] pl-[.375rem] pr-[.25rem]">
+                <p
+                  class="font-normal text-dark text-[.875rem] opacity-75 leading-[1.25rem] tracking-[.25px] overflow-hidden h-[2.5rem]"
+                >
+                  Choosing the right laptop for programming can be a tough
+                  process. It’s easy to get confused while researching the
+                  various options. There are many different laptop models out
+                  there, each with a different set of trade-offs
+                </p>
+              </div>
+
+              <!-- info -->
+              <div
+                class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
+              >
+                <div class="flex gap-[.625rem]">
+                  <div class="w-[2.75rem]">
+                    <img
+                      src="assets/images/avatar/01.jpg"
+                      alt="avatar 12"
+                      class="w-full rounded-xl"
+                    />
+                  </div>
+                  <div class="flex flex-col justify-between">
+                    <h4
+                      class="font-medium text-[.875rem] leading-[1.375rem] tracking-[.1px] text-dark"
+                    >
+                      Louis Hoebregts
+                    </h4>
+                    <p
+                      class="font-normal text-[.75rem] leading-[1.125rem] tracking-[.25px] text-dark opacity-75"
+                    >
+                      July 25 , 2022
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="assets/images/svg-icons/save-button.svg"
+                    alt=""
+                    class="opacity-50 w-[1.25rem]"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- item 03 -->
+            <div
+              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl"
+            >
+              <!-- image -->
+              <div class="h-[11.625rem] sm:h-[12.5rem] lg:h-[11.875rem]">
+                <img
+                  src="assets/images/car/02.jpg"
+                  alt="sport image"
+                  class="rounded-xl w-full main-img"
+                />
+              </div>
+
+              <!-- title -->
+              <div class="py-[1rem] pl-[.375rem] pr-[.25rem]">
+                <h3
+                  class="font-medium text-[1rem] h-[1.2rem] overflow-hidden text-dark"
+                >
+                  How we built the first real self-driving car
+                </h3>
+              </div>
+
+              <!-- Explanation -->
+              <div class="pb-[1rem] pl-[.375rem] pr-[.25rem]">
+                <p
+                  class="font-normal text-dark text-[.875rem] opacity-75 leading-[1.25rem] tracking-[.25px] overflow-hidden h-[2.5rem]"
+                >
+                  Electric self-driving cars will save millions of lives and
+                  significantly accelerate the world’s transition to sustainable
+                  energy, but only when
+                </p>
+              </div>
+
+              <!-- info -->
+              <div
+                class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
+              >
+                <div class="flex gap-[.625rem]">
+                  <div class="w-[2.75rem]">
+                    <img
+                      src="assets/images/avatar/02.jpg"
+                      alt="avatar 02"
+                      class="w-full rounded-xl"
+                    />
+                  </div>
+                  <div class="flex flex-col justify-between">
+                    <h4
+                      class="font-medium text-[.875rem] leading-[1.375rem] tracking-[.1px] text-dark"
+                    >
+                      Mary
+                    </h4>
+                    <p
+                      class="font-normal text-[.75rem] leading-[1.125rem] tracking-[.25px] text-dark opacity-75"
+                    >
+                      July 14 , 2022
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="assets/images/svg-icons/save-button.svg"
+                    alt=""
+                    class="opacity-50 w-[1.25rem]"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- item 04 -->
+            <div
+              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl"
+            >
+              <!-- image -->
+              <div class="h-[11.625rem] sm:h-[12.5rem] lg:h-[11.875rem]">
+                <img
+                  src="assets/images/food/07.jpg"
+                  alt="sport image"
+                  class="rounded-xl w-full main-img"
+                />
+              </div>
+
+              <!-- title -->
+              <div class="py-[1rem] pl-[.375rem] pr-[.25rem]">
+                <h3
+                  class="font-medium text-[1rem] h-[1.2rem] overflow-hidden text-dark"
+                >
+                  How to Persuade Your Parents to Buy Fast Food
+                </h3>
+              </div>
+
+              <!-- Explanation -->
+              <div class="pb-[1rem] pl-[.375rem] pr-[.25rem]">
+                <p
+                  class="font-normal text-dark text-[.875rem] opacity-75 leading-[1.25rem] tracking-[.25px] overflow-hidden h-[2.5rem]"
+                >
+                  Parents often don’t want to buy fast food. They may be worried
+                  that it’s too expensive, unhealthy, or not worth the effort
+                  and time.
+                </p>
+              </div>
+
+              <!-- info -->
+              <div
+                class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
+              >
+                <div class="flex gap-[.625rem]">
+                  <div class="w-[2.75rem]">
+                    <img
+                      src="assets/images/avatar/10.jpg"
+                      alt="avatar 10"
+                      class="w-full rounded-xl"
+                    />
+                  </div>
+                  <div class="flex flex-col justify-between">
+                    <h4
+                      class="font-medium text-[.875rem] leading-[1.375rem] tracking-[.1px] text-dark"
+                    >
+                      Jon Kantner
+                    </h4>
+                    <p
+                      class="font-normal text-[.75rem] leading-[1.125rem] tracking-[.25px] text-dark opacity-75"
+                    >
+                      May 10 , 2022
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="assets/images/svg-icons/save-button.svg"
+                    alt=""
+                    class="opacity-50 w-[1.25rem]"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- item 05 -->
+            <div
+              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl"
+            >
+              <!-- image -->
+              <div class="h-[11.625rem] sm:h-[12.5rem] lg:h-[11.875rem]">
+                <img
+                  src="assets/images/car/01.jpg"
+                  alt="sport image"
+                  class="rounded-xl w-full main-img"
+                />
+              </div>
+
+              <!-- title -->
+              <div class="py-[1rem] pl-[.375rem] pr-[.25rem]">
+                <h3
+                  class="font-medium text-[1rem] h-[1.2rem] overflow-hidden text-dark"
+                >
+                  Becoming a Self-Driving Car & Machine Learning Engineer
+                </h3>
+              </div>
+
+              <!-- Explanation -->
+              <div class="pb-[1rem] pl-[.375rem] pr-[.25rem]">
+                <p
+                  class="font-normal text-dark text-[.875rem] opacity-75 leading-[1.25rem] tracking-[.25px] overflow-hidden h-[2.5rem]"
+                >
+                  How I left my full-time job, studied at Udacity, and landed a
+                  job at BMW The past year has been quite a journey for me. A
+                  year ago I left my full-time
+                </p>
+              </div>
+
+              <!-- info -->
+              <div
+                class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
+              >
+                <div class="flex gap-[.625rem]">
+                  <div class="w-[2.75rem]">
+                    <img
+                      src="assets/images/avatar/05.jpg"
+                      alt="avatar 05"
+                      class="w-full rounded-xl"
+                    />
+                  </div>
+                  <div class="flex flex-col justify-between">
+                    <h4
+                      class="font-medium text-[.875rem] leading-[1.375rem] tracking-[.1px] text-dark"
+                    >
+                      Cassie Evans
+                    </h4>
+                    <p
+                      class="font-normal text-[.75rem] leading-[1.125rem] tracking-[.25px] text-dark opacity-75"
+                    >
+                      July 12 , 2022
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="assets/images/svg-icons/save-button.svg"
+                    alt=""
+                    class="opacity-50 w-[1.25rem]"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- item 06 -->
+            <div
+              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl"
+            >
+              <!-- image -->
+              <div class="h-[11.625rem] sm:h-[12.5rem] lg:h-[11.875rem]">
+                <img
+                  src="assets/images/abstract/06.jpg"
+                  alt="sport image"
+                  class="rounded-xl w-full main-img"
+                />
+              </div>
+
+              <!-- title -->
+              <div class="py-[1rem] pl-[.375rem] pr-[.25rem]">
+                <h3
+                  class="font-medium text-[1rem] h-[1.2rem] overflow-hidden text-dark"
+                >
+                  How to Become a Master Designer
+                </h3>
+              </div>
+
+              <!-- Explanation -->
+              <div class="pb-[1rem] pl-[.375rem] pr-[.25rem]">
+                <p
+                  class="font-normal text-dark text-[.875rem] opacity-75 leading-[1.25rem] tracking-[.25px] overflow-hidden h-[2.5rem]"
+                >
+                  Many outsiders believe that designers are unicorns, gifted or
+                  special in some way. We have an innate ability to create
+                  gorgeous interfaces, a natural talent for matching
+                  complementary colors, an unexplainable intuition…
+                </p>
+              </div>
+
+              <!-- info -->
+              <div
+                class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
+              >
+                <div class="flex gap-[.625rem]">
+                  <div class="w-[2.75rem]">
+                    <img
+                      src="assets/images/avatar/03.jpg"
+                      alt="avatar 03"
+                      class="w-full rounded-xl"
+                    />
+                  </div>
+                  <div class="flex flex-col justify-between">
+                    <h4
+                      class="font-medium text-[.875rem] leading-[1.375rem] tracking-[.1px] text-dark"
+                    >
+                      Linda
+                    </h4>
+                    <p
+                      class="font-normal text-[.75rem] leading-[1.125rem] tracking-[.25px] text-dark opacity-75"
+                    >
+                      July 10 , 2022
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="assets/images/svg-icons/save-button.svg"
+                    alt=""
+                    class="opacity-50 w-[1.25rem]"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- item 07 -->
+            <div
+              class="swiper-slide shadow-[0_0_32px_rgba(0,0,0,.07)] p-[.625rem] rounded-xl"
+            >
+              <!-- image -->
+              <div class="h-[11.625rem] sm:h-[12.5rem] lg:h-[11.875rem]">
+                <img
+                  src="assets/images/sport/05.jpg"
+                  alt="sport image"
+                  class="rounded-xl w-full main-img"
+                />
+              </div>
+
+              <!-- title -->
+              <div class="py-[1rem] pl-[.375rem] pr-[.25rem]">
+                <h3
+                  class="font-medium text-[1rem] h-[1.2rem] overflow-hidden text-dark"
+                >
+                  Opening Day of Boating Season, Seattle WA
+                </h3>
+              </div>
+
+              <!-- Explanation -->
+              <div class="pb-[1rem] pl-[.375rem] pr-[.25rem]">
+                <p
+                  class="font-normal text-dark text-[.875rem] opacity-75 leading-[1.25rem] tracking-[.25px] overflow-hidden h-[2.5rem]"
+                >
+                  Of course the Puget Sound is very watery, and where there is
+                  water, there are boats. Today is the Grand Opening of Boating
+                  Season when traffic gets stalled in the University District
+                  (UW) while the Montlake Bridge
+                </p>
+              </div>
+
+              <!-- info -->
+              <div
+                class="flex justify-between items-center px-[1rem] py-[0.81rem] rounded-xl bg-btnGray"
+              >
+                <div class="flex gap-[.625rem]">
+                  <div class="w-[2.75rem]">
+                    <img
+                      src="assets/images/avatar/12.jpg"
+                      alt="avatar 12"
+                      class="w-full rounded-xl"
+                    />
+                  </div>
+                  <div class="flex flex-col justify-between">
+                    <h4
+                      class="font-medium text-[.875rem] leading-[1.375rem] tracking-[.1px] text-dark"
+                    >
+                      James
+                    </h4>
+                    <p
+                      class="font-normal text-[.75rem] leading-[1.125rem] tracking-[.25px] text-dark opacity-75"
+                    >
+                      August 18 , 2022
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="assets/images/svg-icons/save-button.svg"
+                    alt=""
+                    class="opacity-50 w-[1.25rem]"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- sticky footer for mobile -->
     <section
       class="flex items-center justify-between gap-[9.231vw] z-50 px-[7.692vw] py-[3.846vw] sticky bottom-0 bg-white rounded-t-[4.103vw] sm:hidden"
     >
@@ -2061,9 +2926,164 @@
         />
       </div>
     </section>
-    
-    <footer>
 
+    <footer
+      class="lg:grid lg:grid-cols-[60%_40%]"
+    >
+      <section
+        class="hidden  sm:grid grid-cols-[2fr_1fr] gap-x-[1.69rem] gap-y-[1.875rem] bg-btnGray rounded-r-xl ml-[.125rem] pl-[4.25rem] pr-[1.5rem] py-[2.5rem] mr-[3rem] mb-[3rem] "
+      >
+        <!-- about -->
+        <div class="flex flex-col gap-[1.25rem]">
+          <div class="flex items-center gap-[.375rem]">
+            <img
+              src="assets/images/svg-icons/Rectangle.svg"
+              alt=""
+              class="w-[.25rem]"
+            />
+            <h3 class="text-dark font-medium text-[1.25rem] capitalize">
+              mega news
+            </h3>
+          </div>
+          <div>
+            <p
+              class="text-[.875rem] text-dark75 leading-[1.25rem] tracking-[.25px] pl-[.625rem] text-justify"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae
+              congue mauris rhoncus aenean vel elit scelerisque. In egestas erat
+              imperdiet sed euismod nisi porta lorem mollis. Morbi tristique
+              senectus et netus. Mattis pellentesque id nibh tortor id aliquet
+              lectus proin Morbi tristique senectus et netus.
+            </p>
+          </div>
+        </div>
+        <!-- categories -->
+        <div class="flex flex-col gap-[1.25rem]">
+          <div class="flex items-center gap-[.375rem]">
+            <img
+              src="assets/images/svg-icons/Rectangle.svg"
+              alt=""
+              class="w-[.25rem]"
+            />
+            <h3 class="text-dark font-medium text-[1.25rem] capitalize">
+              categories
+            </h3>
+          </div>
+          <div>
+            <div class="flex flex-col gap-[.94rem]">
+              <a
+                href=""
+                class="capitalize text-dark text-[.75rem] leading-[.875rem]"
+                >culure</a
+              >
+              <a
+                href=""
+                class="capitalize text-dark text-[.75rem] leading-[.875rem]"
+                >fashion</a
+              >
+              <a
+                href=""
+                class="capitalize text-dark text-[.75rem] leading-[.875rem]"
+                >featured</a
+              >
+              <a
+                href=""
+                class="capitalize text-dark text-[.75rem] leading-[.875rem]"
+                >food</a
+              >
+              <a
+                href=""
+                class="capitalize text-dark text-[.75rem] leading-[.875rem]"
+                >healthy living</a
+              >
+              <a
+                href=""
+                class="capitalize text-dark text-[.75rem] leading-[.875rem]"
+                >technology</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- newsletters -->
+        <div class="flex flex-col gap-[1.25rem]">
+          <div class="flex items-center gap-[.375rem]">
+            <img
+              src="assets/images/svg-icons/Rectangle.svg"
+              alt=""
+              class="w-[.25rem]"
+            />
+            <h3 class="text-dark font-medium text-[1.25rem] capitalize">
+              newsletters
+            </h3>
+          </div>
+          <div>
+            <form action="" method="get">
+              <div
+                class="pl-[.5rem] pr-[.75rem] py-[.5rem] flex items-center bg-white gap-[1rem] rounded-xl"
+              >
+                <input
+                  type="email"
+                  class="w-full text-[.75rem] focus:outline-none my-[9px]"
+                  placeholder="Write Your Email .."
+                />
+                <img src="assets/images/svg-icons/mail.svg" alt="" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- social-network -->
+        <div class="flex flex-col gap-[1.25rem]">
+          <div class="flex items-center gap-[.375rem]">
+            <img
+              src="assets/images/svg-icons/Rectangle.svg"
+              alt=""
+              class="w-[.25rem]"
+            />
+            <h3 class="text-dark font-medium text-[1.25rem] capitalize">
+              social network
+            </h3>
+          </div>
+          <div class="flex gap-[1rem]">
+            <button
+              type="button"
+              class="bg-insta_active hover:bg-insta_hover text-white flex items-center gap-[.5rem] pl-[1rem] pr-[1.5rem] py-[.625rem] rounded-xl text-[.875rem]"
+            >
+              <img src="assets/images/svg-icons/instagram.svg" alt="" />
+              Instagram
+            </button>
+            <div class="p-[.75rem] bg-twitter rounded-xl inline-block">
+              <img
+                src="assets/images/svg-icons/twitter.svg"
+                class="w-[1rem]"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- new comments -->
+       <section class="py-[2.5rem]">
+        <div>
+          <div class="flex items-center gap-[.375rem]">
+            <img
+              src="assets/images/svg-icons/Rectangle.svg"
+              alt=""
+              class="w-[.25rem]"
+            />
+            <h3 class="text-dark font-medium text-[1.25rem] capitalize">
+              new comments
+            </h3>
+          </div>
+          <div class="swiper new-comments">
+            <div class="swiper-wrapper">
+              .
+            </div>
+          </div>
+        </div>
+       </section>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

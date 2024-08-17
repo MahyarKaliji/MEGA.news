@@ -3,7 +3,28 @@
   margin: 0;
 }
 
-#weather {
+#weather1 {
+  background-size: 170vw;
+  background-position-x: 135vw;
+  background-position-y: 102vw;
+  position: relative;
+}
+
+#weather2 {
+  background-size: 170vw;
+  background-position-x: 135vw;
+  background-position-y: 102vw;
+  position: relative;
+}
+
+#weather3 {
+  background-size: 170vw;
+  background-position-x: 135vw;
+  background-position-y: 102vw;
+  position: relative;
+}
+
+#weather4 {
   background-size: 170vw;
   background-position-x: 135vw;
   background-position-y: 102vw;
@@ -83,7 +104,9 @@
   height: 210px;
 }
 
-.swiper.trendy-posts {
+.swiper.trendy-posts,
+.swiper.top-posts,
+.swiper.top-tags {
   width: 100%;
   height: 100%;
 }
@@ -95,7 +118,49 @@
     background-position-y: -56vw;
   }
 
+  .popular-posts,
+  .trendy-posts,
+  .top-posts {
+    mask-image: linear-gradient(to right, black 75%, transparent);
+  }
+
   .swiper.new-posts {
     height: 1008px;
+  }
+
+  #weather1 {
+    background-size: 223%;
+    background-position-x: 41%;
+    background-position-y: 36%;
+    position: relative;
+  }
+
+  #weather2 {
+    background-size: 102%;
+    background-position-x: 80%;
+    background-position-y: 40%;
+    position: relative;
+  }
+  
+  #weather3 {
+    background-size: 100%;
+    background-position-x: 0;
+    background-position-y: 100%;
+    position: relative;
+  }
+  
+  #weather4 {
+    background-size: 100%;
+    background-position-x: 0;
+    background-position-y: 0;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .popular-posts,
+  .trendy-posts,
+  .top-posts {
+    mask-image: unset;
   }
 }
