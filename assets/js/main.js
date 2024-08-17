@@ -170,3 +170,41 @@ const topTagsSwiper = new Swiper(".swiper.top-tags", {
   // },
 });
 
+// comments section swiper
+const commentsSwiper = new Swiper(".swiper.new-comments", {
+  // Optional parameters
+  // loop: true,
+direction: 'vertical',
+    // autoplay: {
+    //   delay: 3000,
+    // },
+
+    spaceBetween: 5,
+    slidesPerView: 4,
+  // breakpoints: {
+  //   350: {
+  //     spaceBetween: 20,
+  //     slidesPerView: 1,
+  //   },
+  //   640: {
+  //     slidesPerView: 1.8,
+  //   },
+  //   768: {
+  //     slidesPerView: 2,
+  //   },
+  //   1024: {
+  //     slidesPerView: 2.5,
+  //   },
+  //   1280: {
+  //     slidesPerView: 3,
+  //     // centeredSlides: true,
+  //   },
+  //   1520: {
+  //     slidesPerView: 3.5,
+  //   },
+  //   1920: {
+  //     slidesPerView: 4,
+  //     spaceBetween: 24,
+  //   },
+  // },
+});
