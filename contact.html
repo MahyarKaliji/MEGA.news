@@ -13,7 +13,7 @@
   </head>
   <body class="font-main">
     <header
-      class="mt-[11.538vw] mb-[7.692vw] sm:mt-[2vw] sm:mb-[8.065vw] lg:my-[2.344vw] mx-[1rem] sm:mx-[9.409vw] lg:mx-[7.812vw] xl:mx-[10.625vw]"
+      class="mt-[11.538vw] mb-[7.692vw] sm:mt-[2vw] sm:mb-[8.065vw] lg:my-[2.344vw] mx-[1rem] sm:mx-[9.409vw] lg:mx-[7.812vw] xl:mx-[10.625vw] lg:mb-[6.5rem]"
     >
       <section class="flex items-center justify-between">
         <!-- logo and menu - left header -->
@@ -31,7 +31,9 @@
           </div>
           <!-- logo -->
           <div class="hidden sm:block basis-1/2 lg:basis-0">
-            <h1 class="font-bold text-logo text-[1.375rem]">MEGA.news</h1>
+            <h1 class="font-bold text-logo text-[1.375rem]">
+              <a href="index.html">MEGA.news</a>
+            </h1>
           </div>
           <!-- menu -->
           <nav class="hidden lg:block lg:w-auto" id="navMenu">
@@ -120,22 +122,185 @@
       </section>
     </header>
 
+    <main class="sm:mb-[3rem] lg:mb-[6.5rem]">
+      <section>
+        <form action="" method="get" class="mx-[1rem] sm:mx-[9.409vw] lg:mx-[7.812vw] xl:mx-[10.625vw] lg:grid lg:grid-cols-3 lg:gap-x-[1.5rem] lg:gap-y-[1.25rem]">
+          <!-- subject -->
+          <div class="flex flex-col gap-[1rem] mb-[1.5rem]">
+            <div>
+              <label
+                for="subject"
+                class="capitalize text-[1rem] font-medium text-dark"
+                >subject</label
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                class="bg-btnGray h-[3rem] rounded-xl w-full focus:outline-[#E6E6E6] px-4"
+              />
+            </div>
+          </div>
+
+          <!-- name -->
+          <div class="flex flex-col gap-[1rem] mb-[1.5rem]">
+            <div>
+              <label
+                for="name"
+                class="capitalize text-[1rem] font-medium text-dark"
+                >name</label
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="bg-btnGray h-[3rem] rounded-xl w-full focus:outline-[#E6E6E6] px-4"
+              />
+            </div>
+          </div>
+
+          <!-- email -->
+          <div class="flex flex-col gap-[1rem] mb-[1.5rem]">
+            <div>
+              <label
+                for="email"
+                class="capitalize text-[1rem] font-medium text-dark"
+                >email</label
+              >
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="bg-btnGray h-[3rem] rounded-xl w-full focus:outline-[#E6E6E6] px-4"
+              />
+            </div>
+          </div>
+
+          <!-- explanation -->
+          <div class="flex flex-col gap-[1rem] mb-[1.5rem] lg:col-span-2">
+            <div>
+              <label
+                for="subject"
+                class="capitalize text-[1rem] font-medium text-dark"
+                >explanation</label
+              >
+            </div>
+            <div
+              class="bg-white shadow-[0_0_32px_rgba(0,0,0,0.07)] p-5 rounded-xl flex flex-col gap-[1.5rem] h-[22.5rem]"
+            >
+              <div class="flex items-center justify-between lg:justify-start gap-[1.25rem]">
+                <div class="px-[1rem] sm:pr-[1.5rem] py-[.625rem] bg-btnGray rounded-xl flex items-center gap-[.5rem]">
+                  <img src="assets/images/svg-icons/image-insert.svg" alt="" />
+                  <a href="" class="capitalize text-dark75 text-[.875rem] font-medium leading-[1.25rem] hidden sm:block">image</a>
+                </div>
+
+                <div class="px-[1rem] sm:pr-[1.5rem] py-[.625rem] bg-btnGray rounded-xl flex items-center gap-[.5rem]">
+                  <img src="assets/images/svg-icons/color-picker.svg" alt="" />
+                  <a href="" class="capitalize text-dark75 text-[.875rem] font-medium leading-[1.25rem] hidden sm:block">color</a>
+                </div>
+
+                <div class="px-[1rem] sm:pr-[1.5rem] py-[.625rem] bg-btnGray rounded-xl flex items-center gap-[.5rem]">
+                  <img src="assets/images/svg-icons/code-insert.svg" alt="" />
+                  <a href="" class="capitalize text-dark75 text-[.875rem] font-medium leading-[1.25rem] hidden sm:block">text</a>
+                </div>
+
+                <div class="px-[1rem] sm:pr-[1.5rem] py-[.625rem] bg-btnGray rounded-xl flex items-center gap-[.5rem]">
+                  <img src="assets/images/svg-icons/text-align.svg" alt="" />
+                  <a href="" class="capitalize text-dark75 text-[.875rem] font-medium leading-[1.25rem] hidden sm:block">align</a>
+                </div>
+
+                <div class="px-[1rem] sm:pr-[1.5rem] py-[.625rem] bg-btnGray rounded-xl flex items-center gap-[.5rem]">
+                  <img src="assets/images/svg-icons/attachment.svg" alt="" />
+                  <a href="" class="capitalize text-dark75 text-[.875rem] font-medium leading-[1.25rem] hidden sm:block">link</a>
+                </div>
+              </div>
+              <textarea
+                type="text"
+                name="subject"
+                id="subject"
+                class="bg-btnGray h-full rounded-xl w-full focus:outline-[#E6E6E6] p-5"
+                placeholder="Type ..."
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- add image -->
+           <div class="flex flex-col gap-[1rem] mb-[1.5rem]">
+            <div><label for="" class="capitalize text-[1rem] font-medium text-dark">add image</label></div>
+          <div class="flex flex-col items-center text-center p-5 h-[22.5rem] bg-btnGray rounded-xl">
+            <span class="flex flex-col items-center gap-[1.5rem] justify-center w-full h-full mx-auto my-0 relative border-2 border-dashed border-[#e1e1e1]  duration-[0.3s] rounded-xl">
+              <div>
+                <img src="assets/images/svg-icons/upload.svg" alt="" />
+              </div>
+              <div>
+                <p class="capitalize text-dark75">drop file here, paste or</p>
+              </div>
+              <div>
+                <input
+                  type="file"
+                  onchange="dragNdrop(event)"
+                  ondragover="drag()"
+                  ondrop="drop()"
+                  name="uploadFile"
+                  id="uploadFile"
+                  class="absolute h-full w-full opacity-0 top-0 left-0"
+                />
+              </div>
+              <div>
+                <label
+                  for="uploadFile"
+                  class="flex items-center gap-[.5rem] py-[.625rem] pl-[1rem] pr-[1.5rem] rounded-xl border text-dark75"
+                >
+                  <img src="assets/images/svg-icons/plus-icon.svg" alt="" />
+                  Select
+                </label>
+              </div>
+            </span>
+          </div>
+          <div id="preview"></div>
+           </div>
+
+           <!-- submit button -->
+            <div class="flex justify-end lg:col-span-3">
+              <button type="submit" class="text-white text-[.875rem] leading-[1.25rem] font-medium bg-primary rounded-xl flex items-center gap-[.5rem] py-[.625rem]
+              pl-[1rem] pr-[1.5rem] ">
+                <img src="assets/images/svg-icons/submit.svg" alt="submit">
+                send
+              </button>
+            </div>
+        </form>
+      </section>
+    </main>
+
     <!-- sticky footer for mobile -->
     <section
       class="flex items-center justify-between gap-[9.231vw] z-50 px-[7.692vw] py-[3.846vw] sticky bottom-0 bg-white rounded-t-[4.103vw] sm:hidden"
     >
       <div>
-        <button
-          type="button"
-          class="bg-primary text-white font-medium text-[.875rem] leading-[1.25rem] flex items-center gap-[2.051vw] py-[2.564vw] pl-[4.103vw] pr-[6.154vw] rounded-xl"
+        <a href="index.html"
+          class="bg-btnGray text-dark75 font-medium text-[.875rem] leading-[1.25rem] flex items-center gap-[2.051vw] py-[2.564vw] pl-[4.103vw] pr-[6.154vw] rounded-xl"
         >
-          <img
-            src="assets/images/svg-icons/home-white.svg"
-            alt="home button"
-            class="w-[3.590vw]"
-          />
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 16 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.8477 7.75C15.8477 8.24219 15.4375 8.625 14.9727 8.625H14.0977L14.125 13C14.125 13.082 14.125 13.1641 14.125 13.2188V13.6562C14.125 14.2852 13.6328 14.75 13.0312 14.75H12.5938C12.5391 14.75 12.5117 14.75 12.4844 14.75C12.457 14.75 12.4023 14.75 12.375 14.75H10.8438C10.2148 14.75 9.75 14.2852 9.75 13.6562V11.25C9.75 10.7852 9.33984 10.375 8.875 10.375H7.125C6.63281 10.375 6.25 10.7852 6.25 11.25V13.6562C6.25 14.2852 5.75781 14.75 5.15625 14.75H3.625C3.57031 14.75 3.54297 14.75 3.48828 14.75C3.46094 14.75 3.43359 14.75 3.40625 14.75H2.96875C2.33984 14.75 1.875 14.2852 1.875 13.6562V10.5938C1.875 10.5938 1.875 10.5664 1.875 10.5391V8.625H1C0.507812 8.625 0.125 8.24219 0.125 7.75C0.125 7.50391 0.207031 7.28516 0.398438 7.09375L7.39844 0.996094C7.58984 0.804688 7.80859 0.75 8 0.75C8.19141 0.75 8.41016 0.832031 8.57422 0.96875L15.5469 7.09375C15.7656 7.28516 15.875 7.50391 15.8477 7.75Z"
+              fill="rgba(62, 50, 50, .75)"
+            />
+          </svg>
+
           Home
-        </button>
+        </a href="index.html">
       </div>
       <div class="p-[3.077vw] rounded-xl">
         <img

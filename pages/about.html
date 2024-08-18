@@ -1,17 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body>
-  <div class="grid grid-cols-[30% 50%] items-center justify-center justify-items-center content-center">
-    <h3 class="px-6 py-4 m-10 bg-red-500">title1</h3>
-    <h3 class="px-3 py-1 m-10 bg-blue-500">title2</h3>
-    <h3 class="px-2 py-3 m-10 bg-green-500">title3</h3>
-    <h3 class="px-1 py-2 m-10 bg-orange-500">title4</h3>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEGA.news</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="font-main">
+    <header
+      class="mt-[11.538vw] mb-[7.692vw] sm:mt-[2vw] sm:mb-[8.065vw] lg:my-[2.344vw] mx-[1rem] sm:mx-[9.409vw] lg:mx-[7.812vw] xl:mx-[10.625vw]"
+    >
+      <section class="flex items-center justify-between">
+        <!-- logo and menu - left header -->
+        <div
+          class="flex items-center justify-between gap-[.625rem] w-full lg:gap-[3.542vw] sm:flex-wrap lg:flex-nowrap"
+        >
+          <!-- hamburger button for mobile size -->
+          <div
+            class="flex flex-col items-center justify-center gap-1 rounded-xl p-3.5 h-12 cursor-pointer relative bg-btnGray lg:hidden"
+            id="hamburger"
+          >
+            <span class="w-5 rounded-xl h-1 bg-dark duration-[0.4s]"></span>
+            <span class="w-5 rounded-xl h-1 bg-dark duration-[0.4s]"></span>
+            <span class="w-5 rounded-xl h-1 bg-dark duration-[0.4s]"></span>
+          </div>
+          <!-- logo -->
+          <div class="hidden sm:block basis-1/2 lg:basis-0">
+            <h1 class="font-bold text-logo text-[1.375rem]">MEGA.news</h1>
+          </div>
+          <!-- menu -->
+          <nav class="hidden lg:block lg:w-auto" id="navMenu">
+            <ul
+              class="lg:flex lg:items-center lg:justify-start lg:gap-[1.771vw] w-full"
+            >
+              <li>
+                <a class="font-medium text-[.75rem] xl:text-[.9rem]" href=""
+                  >Categories</a
+                >
+              </li>
+              <li>
+                <a class="font-medium text-[.75rem] xl:text-[.9rem]" href=""
+                  >Pages</a
+                >
+              </li>
+              <li>
+                <a
+                  class="font-medium text-[.75rem] xl:text-[.9rem]"
+                  class="font-main"
+                  href="contact.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="font-medium text-[.75rem] xl:text-[.9rem]"
+                  class=""
+                  href="about.html"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- right header -->
+
+          <!-- navbar search box -->
+          <form
+            action=""
+            method="get"
+            class="navbar-searchbox w-full flex items-center justify-between gap-[1.25rem] bg-btnGray px-[1rem] py-[.5rem] rounded-xl sm:order-2 lg:order-[0] lg:w-[20.78vw]"
+          >
+            <img
+              class="option-btn w-[1.25rem]"
+              src="assets/images/svg-icons/option.svg"
+              alt=""
+            />
+            <input
+              class="bg-transparent w-full h-[2rem] text-[.75rem] lg:text-[.75rem] pl-[.5rem]"
+              placeholder="Search Anything"
+              type="search"
+              name="nav-search-box"
+              id="nav-search-box"
+            />
+            <button type="submit">
+              <img
+                class="search-btn w-[1.25rem]"
+                src="assets/images/svg-icons/search.svg"
+                alt=""
+              />
+            </button>
+          </form>
+
+          <!-- user section -->
+          <div class="hidden sm:flex items-center gap-[.625rem]">
+            <div class="flex items-center gap-[.417vw]">
+              <div
+                class="w-12 h-12 flex items-center justify-center overflow-hidden border-[1px] rounded-xl"
+              >
+                <img src="assets/images/avatar/14.jpg" alt="" class="w-full" />
+              </div>
+              <span class="font-medium text-[1rem]">Mahyar</span>
+            </div>
+            <div
+              class="w-[3rem] h-[3rem] bg-btnGray flex items-center justify-center rounded-xl"
+            >
+              <img
+                src="assets/images/svg-icons/save-button.svg"
+                alt=""
+                class="w-[1.25rem]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- sticky footer for mobile -->
+    <section
+      class="flex items-center justify-between gap-[9.231vw] z-50 px-[7.692vw] py-[3.846vw] sticky bottom-0 bg-white rounded-t-[4.103vw] sm:hidden"
+    >
+      <div>
+        <button
+          type="button"
+          class="bg-primary text-white font-medium text-[.875rem] leading-[1.25rem] flex items-center gap-[2.051vw] py-[2.564vw] pl-[4.103vw] pr-[6.154vw] rounded-xl"
+        >
+          <img
+            src="assets/images/svg-icons/home-white.svg"
+            alt="home button"
+            class="w-[3.590vw]"
+          />
+          Home
+        </button>
+      </div>
+      <div class="p-[3.077vw] rounded-xl">
+        <img
+          src="assets/images/svg-icons/save-button-solid.svg"
+          alt=""
+          class="w-[4.103vw]"
+        />
+      </div>
+      <div class="p-[3.077vw] rounded-xl">
+        <img
+          src="assets/images/svg-icons/user-solid.svg"
+          alt=""
+          class="w-[4.103vw]"
+        />
+      </div>
+      <div class="p-[3.077vw] rounded-xl">
+        <img
+          src="assets/images/svg-icons/up-button.svg"
+          alt=""
+          class="w-[4.103vw]"
+        />
+      </div>
+    </section>
+
+    <footer
+      class="lg:grid lg:grid-cols-[60%_40%] xl:grid-cols-[65%_35%] xxl:grid-cols-2 gap-[1.5rem] mr-[1rem] sm:mr-[9.409vw] lg:mr-[7.812vw] xl:mr-[10.625vw]"
+    >
+      <!-- left footer -->
+      <section
+        class="hidden sm:block bg-btnGray rounded-r-xl pr-[1.5rem] py-[2.5rem] lg:mr-0 mb-[3rem]"
+      >
+        <div
+          class="sm:grid grid-cols-[2fr_1fr] gap-x-[1.69rem] gap-y-[1.875rem] mb-[3rem] pl-[1rem] sm:pl-[9.409vw] lg:pl-[7.812vw] xl:pl-[10.625vw]"
+        >
+          <!-- about -->
+          <div class="flex flex-col gap-[1.25rem]">
+            <div class="flex items-center gap-[.375rem]">
+              <img
+                src="assets/images/svg-icons/Rectangle.svg"
+                alt=""
+                class="w-[.25rem]"
+              />
+              <h3 class="text-dark font-medium text-[1.25rem] capitalize">
+                mega news
+              </h3>
+            </div>
+            <div>
+              <p
+                class="text-[.875rem] text-dark75 leading-[1.25rem] tracking-[.25px] pl-[.625rem] text-justify w-4/5"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae
+                congue mauris rhoncus aenean vel elit scelerisque. In egestas
+                erat imperdiet sed euismod nisi porta lorem mollis. Morbi
+                tristique senectus et netus. Mattis pellentesque id nibh tortor
+                id aliquet lectus proin Morbi tristique senectus et netus.
+              </p>
+            </div>
+          </div>
+          <!-- categories -->
+          <div class="flex flex-col gap-[1.25rem]">
+            <div class="flex items-center gap-[.375rem]">
+              <img
+                src="assets/images/svg-icons/Rectangle.svg"
+                alt=""
+                class="w-[.25rem]"
+              />
+              <h3 class="text-dark font-medium text-[1.25rem] capitalize">
+                categories
+              </h3>
+            </div>
+            <div>
+              <div class="flex flex-col gap-[.94rem]">
+                <a
+                  href=""
+                  class="capitalize text-dark text-[.75rem] leading-[.875rem]"
+                  >culure</a
+                >
+                <a
+                  href=""
+                  class="capitalize text-dark text-[.75rem] leading-[.875rem]"
+                  >fashion</a
+                >
+                <a
+                  href=""
+                  class="capitalize text-dark text-[.75rem] leading-[.875rem]"
+                  >featured</a
+                >
+                <a
+                  href=""
+                  class="capitalize text-dark text-[.75rem] leading-[.875rem]"
+                  >food</a
+                >
+                <a
+                  href=""
+                  class="capitalize text-dark text-[.75rem] leading-[.875rem]"
+                  >healthy living</a
+                >
+                <a
+                  href=""
+                  class="capitalize text-dark text-[.75rem] leading-[.875rem]"
+                  >technology</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- newsletters -->
+          <div class="flex flex-col gap-[1.25rem]">
+            <div class="flex items-center gap-[.375rem]">
+              <img
+                src="assets/images/svg-icons/Rectangle.svg"
+                alt=""
+                class="w-[.25rem]"
+              />
+              <h3 class="text-dark font-medium text-[1.25rem] capitalize">
+                newsletters
+              </h3>
+            </div>
+            <div>
+              <form action="" method="get">
+                <div
+                  class="pl-[.5rem] pr-[.75rem] py-[.5rem] flex items-center bg-white gap-[1rem] rounded-xl"
+                >
+                  <input
+                    type="email"
+                    class="w-full text-[.75rem] focus:outline-none my-[9px]"
+                    placeholder="Write Your Email .."
+                  />
+                  <img src="assets/images/svg-icons/mail.svg" alt="" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- social-network -->
+          <div class="flex flex-col gap-[1.25rem]">
+            <div class="flex items-center gap-[.375rem]">
+              <img
+                src="assets/images/svg-icons/Rectangle.svg"
+                alt=""
+                class="w-[.25rem]"
+              />
+              <h3 class="text-dark font-medium text-[1.25rem] capitalize">
+                social network
+              </h3>
+            </div>
+            <div class="flex gap-[1rem]">
+              <button
+                type="button"
+                class="bg-insta_active hover:bg-insta_hover text-white flex items-center gap-[.5rem] pl-[1rem] pr-[1.5rem] py-[.625rem] rounded-xl text-[.875rem]"
+              >
+                <img src="assets/images/svg-icons/instagram.svg" alt="" />
+                Instagram
+              </button>
+              <div class="p-[.75rem] bg-twitter rounded-xl inline-block">
+                <img
+                  src="assets/images/svg-icons/twitter.svg"
+                  class="w-[1rem]"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- rights -->
+        <div
+          class="flex justify-between py-[1rem] bg-dark5 px-[4.25rem] rounded-r-xl pl-[1rem] sm:pl-[9.409vw] lg:pl-[7.812vw] xl:pl-[10.625vw]"
+        >
+          <p class="capitalize text-[.75rem] text-dark75">
+            privacy policy | terms & conditions
+          </p>
+          <p class="capitalize text-[.75rem] text-dark75">
+            all copyright (c) 2022 reserved
+          </p>
+        </div>
+      </section>
+
+      <section class="hidden lg:flex gap-[1.5rem] py-[2.5rem]">
+        <!-- new comments -->
+        <div class="lg:w-[35vw] xl:w-[25vw]">
+          <div class="flex items-center gap-[.375rem] mb-[1.25rem]">
+            <img
+              src="assets/images/svg-icons/Rectangle.svg"
+              alt=""
+              class="w-[.25rem]"
+            />
+            <h3 class="text-dark font-medium text-[1.25rem] capitalize">
+              new comments
+            </h3>
+          </div>
+          <div class="swiper new-comments">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide p-[.5rem] flex flex-col gap-[.5rem] rounded-xl bg-btnGray"
+              >
+                <h4 class="capitalize text-[1rem] font-medium text-dark">
+                  ellsmartx
+                </h4>
+                <p class="capitalize text-[.75rem] text-dark75">
+                  how nice does this look 😍 I feel it should be delicious,
+                  thank you
+                </p>
+              </div>
+
+              <div
+                class="swiper-slide p-[.5rem] flex flex-col gap-[.5rem] rounded-xl bg-btnGray"
+              >
+                <h4 class="capitalize text-[1rem] font-medium text-dark">
+                  cassia
+                </h4>
+                <p class="capitalize text-[.75rem] text-dark75">
+                  Take a rest, i'll be cheer up you again in 2 next game go go
+                  go
+                </p>
+              </div>
+
+              <div
+                class="swiper-slide p-[.5rem] flex flex-col gap-[.5rem] rounded-xl bg-btnGray"
+              >
+                <h4 class="capitalize text-[1rem] font-medium text-dark">
+                  amanda
+                </h4>
+                <p class="capitalize text-[.75rem] text-dark75">
+                  you were stunning today, jan! 💗 great match 👍🏽👍🏽
+                </p>
+              </div>
+
+              <div
+                class="swiper-slide p-[.5rem] flex flex-col gap-[.5rem] rounded-xl bg-btnGray"
+              >
+                <h4 class="capitalize text-[1rem] font-medium text-dark">
+                  Denis Simonassi
+                </h4>
+                <p class="capitalize text-[.75rem] text-dark75">
+                  It was a great match today Janzi! You did great😉🇩🇪
+                </p>
+              </div>
+
+              <div
+                class="swiper-slide p-[.5rem] flex flex-col gap-[.5rem] rounded-xl bg-btnGray"
+              >
+                <h4 class="capitalize text-[1rem] font-medium text-dark">
+                  ellsmartx
+                </h4>
+                <p class="capitalize text-[.75rem] text-dark75">
+                  how nice does this look 😍 I feel it should be delicious,
+                  thank you
+                </p>
+              </div>
+
+              <div
+                class="swiper-slide p-[.5rem] flex flex-col gap-[.5rem] rounded-xl bg-btnGray"
+              >
+                <h4 class="capitalize text-[1rem] font-medium text-dark">
+                  ellsmartx
+                </h4>
+                <p class="capitalize text-[.75rem] text-dark75">
+                  how nice does this look 😍 I feel it should be delicious,
+                  thank you
+                </p>
+              </div>
+
+              <div
+                class="swiper-slide p-[.5rem] flex flex-col gap-[.5rem] rounded-xl bg-btnGray"
+              >
+                <h4 class="capitalize text-[1rem] font-medium text-dark">
+                  ellsmartx
+                </h4>
+                <p class="capitalize text-[.75rem] text-dark75">
+                  how nice does this look 😍 I feel it should be delicious,
+                  thank you
+                </p>
+              </div>
+
+              <div
+                class="swiper-slide p-[.5rem] flex flex-col gap-[.5rem] rounded-xl bg-btnGray"
+              >
+                <h4 class="capitalize text-[1rem] font-medium text-dark">
+                  cassia
+                </h4>
+                <p class="capitalize text-[.75rem] text-dark75">
+                  Take a rest, i'll be cheer up you again in 2 next game go go
+                  go
+                </p>
+              </div>
+
+              <div
+                class="swiper-slide p-[.5rem] flex flex-col gap-[.5rem] rounded-xl bg-btnGray"
+              >
+                <h4 class="capitalize text-[1rem] font-medium text-dark">
+                  amanda
+                </h4>
+                <p class="capitalize text-[.75rem] text-dark75">
+                  you were stunning today, jan! 💗 great match 👍🏽👍🏽
+                </p>
+              </div>
+
+              <div
+                class="swiper-slide p-[.5rem] flex flex-col gap-[.5rem] rounded-xl bg-btnGray"
+              >
+                <h4 class="capitalize text-[1rem] font-medium text-dark">
+                  Denis Simonassi
+                </h4>
+                <p class="capitalize text-[.75rem] text-dark75">
+                  It was a great match today Janzi! You did great😉🇩🇪
+                </p>
+              </div>
+
+              <div
+                class="swiper-slide p-[.5rem] flex flex-col gap-[.5rem] rounded-xl bg-btnGray"
+              >
+                <h4 class="capitalize text-[1rem] font-medium text-dark">
+                  ellsmartx
+                </h4>
+                <p class="capitalize text-[.75rem] text-dark75">
+                  how nice does this look 😍 I feel it should be delicious,
+                  thank you
+                </p>
+              </div>
+
+              <div
+                class="swiper-slide p-[.5rem] flex flex-col gap-[.5rem] rounded-xl bg-btnGray"
+              >
+                <h4 class="capitalize text-[1rem] font-medium text-dark">
+                  ellsmartx
+                </h4>
+                <p class="capitalize text-[.75rem] text-dark75">
+                  how nice does this look 😍 I feel it should be delicious,
+                  thank you
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- follow on instagram -->
+        <div class="hidden xxl:block">
+          <div class="flex items-center gap-[.375rem] mb-[1.25rem]">
+            <img
+              src="assets/images/svg-icons/Rectangle.svg"
+              alt=""
+              class="w-[.25rem]"
+            />
+            <h3 class="text-dark font-medium text-[1.25rem] capitalize">
+              follow on instagram
+            </h3>
+          </div>
+          <div class="grid grid-cols-3 gap-[1.5rem]">
+            <div class="size-[6.5rem]">
+              <img
+                src="assets/images/car/02.jpg"
+                alt=""
+                class="size-full object-cover rounded-xl"
+              />
+            </div>
+            <div class="size-[6.5rem]">
+              <img
+                src="assets/images/animal/10.jpg"
+                alt=""
+                class="size-full object-cover rounded-xl"
+              />
+            </div>
+            <div class="size-[6.5rem]">
+              <img
+                src="assets/images/technology/02.jpg"
+                alt=""
+                class="size-full object-cover rounded-xl"
+              />
+            </div>
+            <div class="size-[6.5rem]">
+              <img
+                src="assets/images/food/07.jpg"
+                alt=""
+                class="size-full object-cover rounded-xl"
+              />
+            </div>
+            <div class="size-[6.5rem]">
+              <img
+                src="assets/images/music/01.jpg"
+                alt=""
+                class="size-full object-cover rounded-xl"
+              />
+            </div>
+            <div class="size-[6.5rem]">
+              <img
+                src="assets/images/dance/03.jpg"
+                alt=""
+                class="size-full object-cover rounded-xl"
+              />
+            </div>
+            <div class="size-[6.5rem]">
+              <img
+                src="assets/images/animal/07.jpg"
+                alt=""
+                class="size-full object-cover rounded-xl"
+              />
+            </div>
+            <div class="size-[6.5rem]">
+              <img
+                src="assets/images/dance/01.jpg"
+                alt=""
+                class="size-full object-cover rounded-xl"
+              />
+            </div>
+            <div class="size-[6.5rem]">
+              <img
+                src="assets/images/sport/02.jpg"
+                alt=""
+                class="size-full object-cover rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
+  
