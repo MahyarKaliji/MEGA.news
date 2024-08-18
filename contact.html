@@ -13,7 +13,7 @@
   </head>
   <body class="font-main">
     <header
-      class="mt-[11.538vw] mb-[7.692vw] sm:mt-[2vw] sm:mb-[8.065vw] lg:my-[2.344vw] mx-[1rem] sm:mx-[9.409vw] lg:mx-[7.812vw] xl:mx-[10.625vw] lg:mb-[6.5rem]"
+      class="mt-[11.538vw] mb-[7.692vw] sm:mt-[2vw] sm:mb-[8.065vw] lg:my-[2.344vw] mx-[1rem] sm:mx-[9.409vw] lg:mx-[7.812vw] xl:mx-[10.625vw]"
     >
       <section class="flex items-center justify-between">
         <!-- logo and menu - left header -->
@@ -22,23 +22,22 @@
         >
           <!-- hamburger button for mobile size -->
           <div
-            class="flex flex-col items-center justify-center gap-1 rounded-xl p-3.5 h-12 cursor-pointer relative bg-btnGray lg:hidden"
+            class="flex flex-col items-center justify-center gap-1 rounded-xl p-3.5 h-12 cursor-pointer relative bg-btnGray lg:hidden order-2"
             id="hamburger"
+            onclick="hamburgerMenu()"
           >
             <span class="w-5 rounded-xl h-1 bg-dark duration-[0.4s]"></span>
             <span class="w-5 rounded-xl h-1 bg-dark duration-[0.4s]"></span>
             <span class="w-5 rounded-xl h-1 bg-dark duration-[0.4s]"></span>
           </div>
           <!-- logo -->
-          <div class="hidden sm:block basis-1/2 lg:basis-0">
-            <h1 class="font-bold text-logo text-[1.375rem]">
-              <a href="index.html">MEGA.news</a>
-            </h1>
+          <div class="hidden sm:block basis-1/2 lg:basis-0 order-3 lg:order-2">
+            <h1 class="font-bold text-logo text-[1.375rem]"><a href="index.html">MEGA.news</a></h1>
           </div>
           <!-- menu -->
-          <nav class="hidden lg:block lg:w-auto" id="navMenu">
+          <nav class="hidden lg:block lg:w-auto order-1 lg:order-3" id="navMenu">
             <ul
-              class="lg:flex lg:items-center lg:justify-start lg:gap-[1.771vw] w-full"
+              class="hidden lg:flex lg:items-center lg:justify-start lg:gap-[1.771vw] w-full" id="navMenu_ul"
             >
               <li>
                 <a class="font-medium text-[.75rem] xl:text-[.9rem]" href=""
@@ -75,7 +74,7 @@
           <form
             action=""
             method="get"
-            class="navbar-searchbox w-full flex items-center justify-between gap-[1.25rem] bg-btnGray px-[1rem] py-[.5rem] rounded-xl sm:order-2 lg:order-[0] lg:w-[20.78vw]"
+            class="navbar-searchbox w-full flex items-center justify-between gap-[1.25rem] bg-btnGray px-[1rem] py-[.5rem] rounded-xl order-5 lg:order-4  lg:w-[20.78vw]"
           >
             <img
               class="option-btn w-[1.25rem]"
@@ -99,7 +98,7 @@
           </form>
 
           <!-- user section -->
-          <div class="hidden sm:flex items-center gap-[.625rem]">
+          <div class="hidden sm:flex items-center gap-[.625rem] order-4 lg:order-5">
             <div class="flex items-center gap-[.417vw]">
               <div
                 class="w-12 h-12 flex items-center justify-center overflow-hidden border-[1px] rounded-xl"
